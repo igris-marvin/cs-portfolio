@@ -30,8 +30,17 @@ To build a professional network within the Software Engineering, IT and Computer
 
 ## Code Samples <a name="code-samples"></a>
 
-- [Code Snippet 1](#)
-- [Code Snippet 2](#)
+```java
+
+@Controller
+public class HomeController () {
+
+  public String getHome() {
+    return "index.html";
+  }
+}
+
+```
 
 ## Skills and Technologies <a name="skills-and-technologies"></a>
 
