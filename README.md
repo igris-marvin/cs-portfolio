@@ -20,13 +20,13 @@ To build a professional network within the Software Engineering, IT and Computer
     An external device(Pulse detector Device) programmed using Arduino.
 
     > Technologies used: HTML, php, Bootstrap 5.3.3, MySQL
-  - Repository Link: https://github.com/igris-marvin/pulse_app_repo
+  - Repository Link: [text](igris-marvin_pulse_app_repo.html)
 
 - Project 2: Sani-Enterprise Web App
   - Description: 
     > E-commerce Catalog website for selling Furniture
     > Technologies used: Java, MariaDB, Spring Boot 3 Framework, Thymeleaf, HTML, Bootstrap 5.3.3, Tomcat Web Server
-  - Repository Link: https://github.com/igris-marvin/INTERNET-PROJECT-2024
+  - Repository Link: [text](igris-marvin_INTERNET-PROJECT-2024.html)
 
 ## Code Samples <a name="code-samples"></a>
 
