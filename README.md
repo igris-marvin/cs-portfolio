@@ -9,7 +9,7 @@ To build a professional network within the Software Engineering, IT and Computer
 
 ## Resume/CV <a name="resume"></a>
 
-- ![alt text](<GitHub - Profile Pic.jpg>)
+- 
 
 ## Projects <a name="projects"></a>
 
