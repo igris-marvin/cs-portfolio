@@ -9,7 +9,7 @@ To build a professional network within the Software Engineering, IT and Computer
 
 ## Resume/CV <a name="resume"></a>
 
-- 
+- ![alt text](<GitHub - Profile Pic.jpg>)
 
 ## Projects <a name="projects"></a>
 
@@ -19,14 +19,14 @@ To build a professional network within the Software Engineering, IT and Computer
     
     An external device(Pulse detector Device) programmed using Arduino.
 
-    > Technologies used: HTML, php, Bootstrap 5.3.3, MySQL
-  - Repository Link: [text](igris-marvin_pulse_app_repo.html)
+    > Technologies used: xampp, HTML, php, Bootstrap 5.3.3, MySQL
+  - Repository Link: [Pulse App GitHub Repo](igris-marvin_pulse_app_repo.html)
 
 - Project 2: Sani-Enterprise Web App
   - Description: 
     > E-commerce Catalog website for selling Furniture
     > Technologies used: Java, MariaDB, Spring Boot 3 Framework, Thymeleaf, HTML, Bootstrap 5.3.3, Tomcat Web Server
-  - Repository Link: [text](igris-marvin_INTERNET-PROJECT-2024.html)
+  - Repository Link: [Sani-Enterprise GitHub Repo](https://github.com/igris-marvin/INTERNET-PROJECT-2024)
 
 ## Code Samples <a name="code-samples"></a>
 
@@ -51,7 +51,7 @@ To build a professional network within the Software Engineering, IT and Computer
 - Primary Email: malopepeter@yahoo.com
 - Secondary Email: marvenmalope2003@gmail.com
 - Phone Number: +27 68 293 8418
-- LinkedIn: linkedin.com/in/peter-malope-a578242bb/
-- GitHub: https://github.com/igris-marvin
+- LinkedIn: [Peter Malope LinkedIn](linkedin.com/in/peter-malope-a578242bb/)
+- GitHub: [Peter Malope GitHub Profile](https://github.com/igris-marvin)
 
 Feel free to explore the repository and reach out to me if you have any questions or opportunities for collaboration!
