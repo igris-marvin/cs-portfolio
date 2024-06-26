@@ -2,7 +2,7 @@
 
 Welcome to my portfolio! This repository showcases my skills, projects, and experiences in the field of Computer Science.
 
-## About
+## Goals
 To secure an internship or entry-level position to gain practical experience in software engineering, computer sciences and or related fields. 
 
 To build a professional network within the Software Engineering, IT and Computer Sciences industry by connecting with colleagues, mentors, and other professionals in the field. 
