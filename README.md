@@ -32,7 +32,7 @@ To build a professional network within the Software Engineering, IT and Computer
 
 - Spring Boot 3
 
-```java
+```java -> Sani-Enterprise Web App Code Sample
 
 @Controller
 @RequestMapping("/")
@@ -53,15 +53,14 @@ public class HomeController {
 
 ```
 
- - PHP
+ - PHP -> Pulse App Code Sample
 
 ```php
 
 $file_path = 'C:\Users\Public\Documents\bpm.txt';
 
-// Check if the file exists
 if (file_exists($file_path)) {
-    // Read the entire file into a string
+
     $file_content = file_get_contents($file_path);
 
     $array = explode("\n", $file_content);
@@ -87,7 +86,7 @@ if (file_exists($file_path)) {
   - Git, GitHub
 
 - Tools
-  - VScode, Android Studio, NetBeans, IntelliJ
+  - VScode, Android Studio, NetBeans, IntelliJ, DBeaver, GitBash
 
 ## Contact Information <a name="contact-information"></a>
 
