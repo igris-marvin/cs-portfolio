@@ -39,7 +39,7 @@ To build a professional network within the Software Engineering, IT and Computer
 public class HomeController {
 
   @GetMapping
-  public String getInternShip(
+  public String getHome(
     Model model
   ) {
     String hello = "Hello World!";
