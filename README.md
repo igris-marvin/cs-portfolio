@@ -30,9 +30,9 @@ To build a professional network within the Software Engineering, IT and Computer
 
 ## Code Samples <a name="code-samples"></a>
 
-- Spring Boot 3
+- Spring Boot 3 -> Sani-Enterprise Web App Code Sample
 
-```java -> Sani-Enterprise Web App Code Sample
+```java
 
 @Controller
 @RequestMapping("/")
