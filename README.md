@@ -2,7 +2,7 @@
 
 Welcome to my portfolio! This repository showcases my skills, projects, and experiences in the field of Computer Science.
 
-## My Goals Are
+## About
 To secure an internship or entry-level position to gain practical experience in software engineering, computer sciences and or related fields. 
 
 To build a professional network within the Software Engineering, IT and Computer Sciences industry by connecting with colleagues, mentors, and other professionals in the field. 
@@ -30,19 +30,50 @@ To build a professional network within the Software Engineering, IT and Computer
 
 ## Code Samples <a name="code-samples"></a>
 
+- Spring Boot 3
+
 ```java
 
 @Controller
-public class HomeController () {
+@RequestMapping("/")
+public class HomeController {
 
-  public String getHome() {
-    return "index.html";
+  @GetMapping
+  public String getInternShip(
+    Model model
+  ) {
+    String hello = "Hello World!";
+
+    model.setAttribute("hello", hello);
+
+    return "index";
   }
+
 }
 
 ```
 
-## Skills and Technologies <a name="skills-and-technologies"></a>
+ - PHP
+
+```php
+
+$file_path = 'C:\Users\Public\Documents\bpm.txt';
+
+// Check if the file exists
+if (file_exists($file_path)) {
+    // Read the entire file into a string
+    $file_content = file_get_contents($file_path);
+
+    $array = explode("\n", $file_content);
+
+    foreach($array as &$pulse_rate) {
+    ...
+    }
+}
+
+```
+
+## Skills, Tools and Technologies <a name="skills-and-technologies"></a>
 
 - Programming Languages: 
   - Java, Kotin
@@ -54,6 +85,9 @@ public class HomeController () {
   - MySQL, MariaDB, OracleDB, Derby
 - Other: 
   - Git, GitHub
+
+- Tools
+  - VScode, Android Studio, NetBeans, IntelliJ
 
 ## Contact Information <a name="contact-information"></a>
 
