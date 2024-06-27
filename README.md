@@ -9,7 +9,7 @@ To build a professional network within the Software Engineering, IT and Computer
 
 ## Resume/CV <a name="resume"></a>
 
-- [Curriculum Vitae Of Peter Malope](<CV/CURRICULUM VITAE OF PETER MALOPE.pdf>))
+- [Curriculum Vitae Of Peter Malope](<CV/CURRICULUM VITAE OF PETER MALOPE.pdf>)
 
 ## Projects <a name="projects"></a>
 
