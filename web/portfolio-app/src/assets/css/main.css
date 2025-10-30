@@ -1,0 +1,55 @@
+/* <weight>: Use a value from 100 to 900 */
+/* <uniquifier>: Use a unique and descriptive class name */
+
+.inter-font-style {
+  font-family: "Inter", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 500;
+  font-style: normal;
+}
+
+/* HOME PAGE CSS */
+
+.hero {
+  background-image: url("../images/home_images/background_image.jpg"); /* Replace with your image URL */
+  background-size: cover;
+  background-position: center;
+  color: white;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+.hero h1 {
+  font-size: 4rem;
+  font-weight: bold;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.6);
+}
+.section-title {
+  margin-top: 2rem;
+  margin-bottom: 1rem;
+}
+
+/* HOME PAGE CSS ENDS */
+
+/* PROJECTS PAGE CSS STARTS */
+
+pre {
+  background-color: #f8f9fa;
+  padding: 1rem;
+  border-radius: 0.5rem;
+  font-size: 0.9rem;
+}
+.tech-stack span {
+  margin-right: 0.5rem;
+  padding: 0.3rem 0.6rem;
+  background-color: #e9ecef;
+  border-radius: 0.3rem;
+  font-size: 0.85rem;
+}
+.badge {
+  margin-right: 0.5rem;
+}
+
+/* PROJECTS PAGE CSS ENDS */
