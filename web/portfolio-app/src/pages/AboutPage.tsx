@@ -1,10 +1,11 @@
 import about_image from "../assets/images/about_images/about_placeholder.jpg"
+import "../assets/css/main.css"
 
 export const AboutPage = () => {
 
     return (
         <>
-            <div className="container-fluid">
+            <div className="about-main container-fluid">
 
                 {/* ROW */}
                 <div className="row">
@@ -15,6 +16,14 @@ export const AboutPage = () => {
                             src={about_image}
                             alt="about page"
                             className="object-fit-cover img-fluid vh-100"
+                            height="250px"
+                            loading="eager"
+                            decoding="async"
+                            fetchPriority="high"
+                            // crossOrigin="anonymous"
+                            referrerPolicy="no-referrer"
+                            draggable="false"
+                            style={{ containIntrinsicSize: "1200px auto" }}
                         />
                     </div>
 
@@ -22,14 +31,16 @@ export const AboutPage = () => {
                     <div className="col-4">
 
                         {/* FLEX ALIGN ITEMS CENTER */}
-                        <div className="container h-100 w-100 d-flex align-items-center bg-info">
+                        <div className="container h-100 w-100 d-flex align-items-center">
 
                             {/* content container */}
-                            <div className="w-100 bg-primary">
+                            <div className="w-100">
 
                                 <div className="fs-1 my-2">
                                     PETER MALOPE
                                 </div>
+
+                                <hr />
 
                                 <div className="fs-4 mb-3">
                                     Software Engineer, Full-Stack Developer, Mobile App Developer, Data Scientist, Database Developer
@@ -65,7 +76,7 @@ export const AboutPage = () => {
                                 <div className="fs-5 mb-3">
 
                                     {/* ROW */}
-                                    <div className="row text-center fs-6">
+                                    <div className="occupation-card row text-center fs-6 py-2 shadow">
 
                                         {/* COLS */}
                                         <div className="col">
@@ -88,19 +99,35 @@ export const AboutPage = () => {
                                 <div className="mb-3">
 
                                     {/* row */}
-                                    <div className="row text-center fs-3">
+                                    <div className="about-icons row text-center fs-3">
 
                                         <div className="col">
-                                            <i className="bi bi-envelope-at"></i>
+                                            
+                                            <a href="mailto:malopepeter@yahoo.com">
+                                                <i className="bi bi-envelope-at"></i>
+                                            </a>
+
                                         </div>
                                         <div className="col">
-                                            <i className="bi bi-linkedin"></i>
+                                            
+                                            <a href="https://www.google.com">
+                                                <i className="bi bi-linkedin"></i>
+                                            </a>
+
                                         </div>
                                         <div className="col">
-                                            <i className="bi bi-github"></i>
+                                            
+                                            <a href="https://www.google.com">
+                                                <i className="bi bi-github"></i>
+                                            </a>
+
                                         </div>
                                         <div className="col">
-                                            <i className="bi bi-instagram"></i>
+                                            
+                                            <a href="https://www.google.com">
+                                                <i className="bi bi-instagram"></i>
+                                            </a>
+                                            
                                         </div>
 
                                     </div>

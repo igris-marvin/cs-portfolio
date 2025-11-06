@@ -12,5 +12,24 @@ import 'bootstrap/dist/css/bootstrap.min.css'
 import 'bootstrap-icons/font/bootstrap-icons.min.css'
 ```
 
+# image optimization
+
+```ts
+<img
+    src={coverImageURL}
+    className="card-img-top object-fit-cover"
+    height="250px"
+    alt={`${name} Image`}
+    loading="lazy"
+    decoding="async"
+    fetchPriority="low"
+    // crossOrigin="anonymous"
+    referrerPolicy="no-referrer"
+    draggable="false"
+    style={{ containIntrinsicSize: "1200px auto" }}
+/>
+
+```
+
 # node - dependencies
 

@@ -8,6 +8,57 @@
   font-style: normal;
 }
 
+/*
+
+The var() function is used to insert the value of a CSS variable.
+
+CSS variables have access to the DOM, which means that you can create variables with local or global scope, change the variables with JavaScript, and change the variables based on media queries.
+
+To create a global variable, declare it inside the :root selector. The :root selector matches the document's root element.
+
+To create a local variable, declare it inside the selector that is going to use it.
+
+A CSS variable name must begin with two dashes (--) and is case sensitive!
+
+Syntax
+:root {
+  --primary-bg-color: green; /* global scope declared here */ 
+/* } */
+
+.note {
+  --note-bg: yellow; /* local scope */
+}
+
+/*
+The CSS var() Function
+The var() function is used to insert the value of a declared CSS variable.
+
+Syntax
+var(--name, value)
+
+name - the name must start with two dashes and is case sensitive, you can separate words with a dash
+value - Optional. the fallback value
+
+#0D0B0C
+#9036A8
+#FFBADA
+#9E1E73
+#d52d80
+#ea91c8
+#faecec // background color
+
+*/
+
+/* COLOR PALETTE - STARTS */
+
+:root {
+  --primary-bg-color: #faecec;
+  /* --primary-bg-color: #d52d80; */
+}
+
+/* COLOR PALETTE - ENDS */
+
+
 /* HOME PAGE CSS */
 
 .hero {
@@ -53,3 +104,26 @@ pre {
 }
 
 /* PROJECTS PAGE CSS ENDS */
+
+/* ABOUT ME - STARTS */
+
+.about-main {
+  background-color: var(--primary-bg-color, white);
+}
+
+.occupation-card {
+  border: 1px;
+  border-style: solid;
+  border-color: black;
+  border-radius: 10px;
+  -webkit-border-radius: 10px;
+  -moz-border-radius: 10px;
+  -ms-border-radius: 10px;
+  -o-border-radius: 10px;
+}
+
+.about-icons div a {
+  color: black;
+}
+
+/* ABOUT ME - ENDS */
