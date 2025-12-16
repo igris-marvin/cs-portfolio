@@ -23,12 +23,6 @@ export const ProjectsPage = ()  => {
       </div>
     </section>
 
-    {/* <!-- Engineering Philosophy --> */}
-    <section className="mb-5">
-      <h3>🧠 Engineering Philosophy</h3>
-      <p>I believe in defensive programming, clean architecture, and scalable design. My code anticipates edge cases, prioritizes user experience, and respects system constraints. Whether integrating hardware or optimizing async flows, I aim for clarity, safety, and elegance.</p>
-    </section>
-
     {/* <!-- Project Cards --> */}
     <div className="row row-cols-1 row-cols-md-2 g-4">
 
@@ -108,12 +102,6 @@ ResultSet rs = stmt.executeQuery();</code></pre>
         <li>🧩 <strong>OracleDB Query Visualizer</strong> – A tool to visualize execution plans and optimize joins.</li>
         <li>🎮 <strong>Stumble Guys Unlock Tracker</strong> – Event-based progress tracker with local caching.</li>
       </ul>
-    </section>
-
-    {/* <!-- Document Engineering --> */}
-    <section className="mt-5">
-      <h3>🗂 Document Engineering</h3>
-      <p>In South African contexts, I’ve mastered SAPS-compliant document workflows, naming protocols, and certification standards. I build systems that respect local norms and reduce friction in administrative processes.</p>
     </section>
 
     {/* <!-- Tech Stack Timeline --> */}

@@ -57,7 +57,7 @@ export const AboutPage = () => {
                                 {/* HASH TAGS */}
                                 <div className="col mb-3">
                                     {/* row */}
-                                    <div className="row text-center fs-6">
+                                    <div className="row text-center fs-6 fw-bold">
                                         <div className="col">
                                             #devops
                                         </div>
@@ -104,20 +104,20 @@ export const AboutPage = () => {
                                         <div className="col">
                                             
                                             <a href="mailto:malopepeter@yahoo.com">
-                                                <i className="bi bi-envelope-at"></i>
+                                                <i className="bi bi-envelope-at-fill"></i>
                                             </a>
 
                                         </div>
                                         <div className="col">
                                             
-                                            <a href="https://www.google.com">
+                                            <a href="https://www.linkedin.com/in/peter-malope-a578242bb/">
                                                 <i className="bi bi-linkedin"></i>
                                             </a>
 
                                         </div>
                                         <div className="col">
                                             
-                                            <a href="https://www.google.com">
+                                            <a href="https://github.com/igris-marvin">
                                                 <i className="bi bi-github"></i>
                                             </a>
 

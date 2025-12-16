@@ -53,13 +53,17 @@ value - Optional. the fallback value
 
 :root {
   --primary-bg-color: #faecec;
-  /* --primary-bg-color: #d52d80; */
+  --secondary-bg-color: #d52d80;
 }
 
 /* COLOR PALETTE - ENDS */
 
 
 /* HOME PAGE CSS */
+
+.home-main {
+  background-color: var(--primary-bg-color, white);
+}
 
 .hero {
   background-image: url("../images/home_images/background_image.jpg"); /* Replace with your image URL */
@@ -69,8 +73,8 @@ value - Optional. the fallback value
   height: 100vh;
   display: flex;
   align-items: center;
-  justify-content: center;
-  text-align: center;
+  justify-content: start;
+  text-align: start;
 }
 .hero h1 {
   font-size: 4rem;
@@ -80,6 +84,10 @@ value - Optional. the fallback value
 .section-title {
   margin-top: 2rem;
   margin-bottom: 1rem;
+}
+
+.home-icons div a {
+  color: purple;
 }
 
 /* HOME PAGE CSS ENDS */
@@ -127,3 +135,16 @@ pre {
 }
 
 /* ABOUT ME - ENDS */
+
+/* FOOTER - STARTS */
+
+.footer-main {
+  background-color: var(--primary-bg-color, white);
+}
+
+.footer-icons div a {
+  color: black;
+}
+
+
+/* FOOTER - ENDS */

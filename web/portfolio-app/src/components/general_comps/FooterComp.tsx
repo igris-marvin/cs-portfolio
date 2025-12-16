@@ -5,22 +5,31 @@ export const FooterComp = () => {
 
     return (
         <>
-            <div>
+            <div className="footer-main py-4">
                 <div className="container-fluid">
 
                     {/* SOCIAL ICONS */}
-                    <div className="d-flex justify-content-center bg-danger fs-5">
+                    <div className="d-flex justify-content-center fs-5 footer-icons">
                         <div className="mx-2">
-                            <i className="bi bi-envelope-at"></i>
+                            <a href="mailto:malopepeter@yahoo.com">
+                                <i className="bi bi-envelope-at-fill"></i>
+                            </a>
+
                         </div>
                         <div className="mx-2">
-                            <i className="bi bi-linkedin"></i>
+                            <a href="https://www.linkedin.com/in/peter-malope-a578242bb/">
+                                <i className="bi bi-linkedin"></i>
+                            </a>
                         </div>
                         <div className="mx-2">
-                            <i className="bi bi-github"></i>
+                            <a href="https://github.com/igris-marvin">
+                                <i className="bi bi-github"></i>
+                            </a>
                         </div>
                         <div className="mx-2">
-                            <i className="bi bi-instagram"></i>
+                            <a href="https://wwww.google.com">
+                                <i className="bi bi-instagram"></i>
+                            </a>
                         </div>
                     </div>
 
