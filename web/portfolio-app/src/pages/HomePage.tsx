@@ -1,3 +1,4 @@
+import { Tag } from "antd"
 
 export const HomePage = () => {
 
@@ -21,6 +22,7 @@ export const HomePage = () => {
                                 sequi tempora sed? Quo vitae harum nulla iusto sit modi laudantium sapiente. Tenetur, alias? Explicabo accusamus sunt aliquam iusto ullam? lorem
                             </p>
 
+                            {/* ICONS */}
                             <div className="mb-3">
 
                                 {/* row */}
@@ -68,28 +70,52 @@ export const HomePage = () => {
             </section>
 
             {/* <!-- Introduction & Goal --> */}
-            <section className="container pt-3">
+            <section className="container py-2 mt-5 shadow shadow-sm">
                 <h2 className="section-title">About Me</h2>
                 <p>
                     I'm a passionate software engineer with a strong foundation in computer science and a love for building scalable, user-centric applications. My goal is to contribute to impactful tech projects while continuously growing my skills in modern development frameworks and best practices.
                 </p>
             </section>
 
-            {/* <!-- Skills Overview --> */}
             <section className="container py-5">
-                <h2 className="section-title">Skills</h2>
-                <ul className="list-group list-group-flush">
-                    <li className="list-group-item">Java • JavaScript • TypeScript • Firebase • HTML • JSP • Kotlin • PHP • Python • PostgreSQL • Thymeleaf</li>
-                    <li className="list-group-item">Spring Boot 3 • Java Enterprise Edition</li>
-                    <li className="list-group-item">React JS • Node JS (Express JS)</li>
-                    <li className="list-group-item">Visual Studio Code • IntelliJ • Android Studio • NetBeans • GitHub • Jetpack Compose • Docker • Wondershare Edraw Max • CPanel • Postman</li>
-                    <li className="list-group-item">Object-Oriented Programming, Data Structures, Algorithms, Database Principles, Computer Science Principles, Asynchronous/Reactive Patterns</li>
-                    <li className="list-group-item">Visual Studio Code • IntelliJ • Android Studio • NetBeans • GitHub • Jetpack Compose • Docker • Wondershare Edraw Max • CPanel • Postman</li>
-                </ul>
-            </section>
+                    <h2 className="section-title">Skills</h2>
+                    <div>
+                        <Tag style={
+                            {
+                                fontSize: "15px"
+                            }
+                        } color="blue">Java &bull; JavaScript &bull; TypeScript &bull; Firebase &bull; HTML &bull; JSP &bull; Kotlin &bull; PHP &bull; Python &bull; PostgreSQL &bull; Thymeleaf</Tag>
+                        <Tag style={
+                            {
+                                fontSize: "15px"
+                            }
+                        } color="green">Spring Boot 3 &bull; Java Enterprise Edition</Tag>
+                        <Tag style={
+                            {
+                                fontSize: "15px"
+                            }
+                        } color="cyan">React JS &bull; Node JS (Express JS)</Tag>
+                        <Tag style={
+                            {
+                                fontSize: "15px"
+                            }
+                        } color="volcano">Visual Studio Code &bull; IntelliJ &bull; Android Studio &bull; NetBeans &bull; GitHub &bull; Jetpack Compose &bull; Docker &bull; Wondershare Edraw Max &bull; CPanel &bull; Postman</Tag>
+                        <Tag style={
+                            {
+                                fontSize: "15px"
+                            }
+                        } color="purple">Object-Oriented Programming &bull; Data Structures &bull; Algorithms &bull; Database Principles &bull; Computer Science Principles &bull; Asynchronous/Reactive Patterns</Tag>
+                        <Tag style={
+                            {
+                                fontSize: "15px"
+                            }
+                        } color="magenta">Visual Studio Code &bull; IntelliJ &bull; Android Studio &bull; NetBeans &bull; GitHub &bull; Jetpack Compose &bull; Docker &bull; Wondershare Edraw Max &bull; CPanel &bull; Postman</Tag>
+
+                    </div>
+                </section>
 
             {/* <!-- Projects --> */}
-            <section className="container py-5">
+            <section className="container">
                 <h2 className="section-title">Projects</h2>
                 <div className="row">
                     <div className="col-md-6 mb-4">

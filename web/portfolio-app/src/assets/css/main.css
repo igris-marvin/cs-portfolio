@@ -52,7 +52,7 @@ value - Optional. the fallback value
 /* COLOR PALETTE - STARTS */
 
 :root {
-  --primary-bg-color: #faecec;
+  --primary-bg-color: #f0f0f0;
   --secondary-bg-color: #d52d80;
 }
 
