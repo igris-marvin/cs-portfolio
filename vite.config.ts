@@ -8,6 +8,7 @@ export default defineConfig({
   // syntax -> base: "/<name of the repository>"
   // this is the endpoint where the code is going to exist when it's pushed to git pages
   // avoids black screen or 404 after deployment
+
   base: "/cs-portfolio" 
 
   // in package json add the homepage as the key and full url as the value
