@@ -21,16 +21,16 @@ export const NavigationBarComp = () => {
                     <div className="collapse navbar-collapse justify-content-end" id="navbarNav">
                         <ul className="navbar-nav">
                             <li className="nav-item">
-                                <NavLink className="nav-link d-flex justify-content-center" aria-current="page" to="/">Home</NavLink>
+                                <NavLink className="nav-link d-flex justify-content-center" aria-current="page" to="/cs-portfolio">Home</NavLink>
                             </li>
                             <li className="nav-item">
-                                <NavLink className="nav-link d-flex justify-content-center" to="/projects">Projects</NavLink>
+                                <NavLink className="nav-link d-flex justify-content-center" to="/cs-portfolio/projects">Projects</NavLink>
                             </li>
                             <li className="nav-item">
-                                <NavLink className="nav-link d-flex justify-content-center" to="/about">About</NavLink>
+                                <NavLink className="nav-link d-flex justify-content-center" to="/cs-portfolio/about">About</NavLink>
                             </li>
                             <li className="nav-item">
-                                <NavLink className="nav-link d-flex justify-content-center" to="/contact">Contact</NavLink>
+                                <NavLink className="nav-link d-flex justify-content-center" to="/cs-portfolio/contact">Contact</NavLink>
                             </li>
                         </ul>
                     </div>
