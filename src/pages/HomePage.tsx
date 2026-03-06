@@ -1,10 +1,19 @@
 import { motion } from "framer-motion"
-import background_image from "../assets/images/background_image.jpg"
-import sani_profile_image from "../assets/images/projects/sani_enterprise_profile_image.jpg"
 import { Sparkles } from "lucide-react"
-import SocialIcons from "../components/SocialIcons"
+import background_image from "../assets/images/background_image.jpg"
+import ezby_profile_image from "../assets/images/projects/ezby_profile_image.svg"
+import pulse_app_profile_image from "../assets/images/projects/pulse_app_profile_image.png"
+import sani_profile_image from "../assets/images/projects/sani_enterprise_profile_image.jpg"
 import type { ProjectDetailsProps } from "../components/ProjectCard"
 import ProjectCard from "../components/ProjectCard"
+import SocialIcons from "../components/SocialIcons"
+import ServicesSection from "../components/home_comps/ServicesSection"
+import SkillsSection from "../components/home_comps/SkillsSection"
+import StatsSection from "../components/home_comps/StatsSection"
+import CTASection from "../components/home_comps/CTASection"
+import CompanySlider from "../components/home_comps/CompanySlider"
+import ScrollToTop from "../components/home_comps/ScrollToTop"
+import { DisclaimerAlert } from "../components/temp_comps/DisclaimerAlert"
 
 export const HomePage = () => {
 
@@ -46,7 +55,7 @@ export const HomePage = () => {
                                     transition={{ delay: 0.2 }}
                                     className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-white/10 backdrop-blur-sm border border-white/20"
                                 >
-                                    <Sparkles size={16} className="text-electric-cyan" />
+                                    <Sparkles size={16} className="text-pink-500" />
                                     <span className="text-sm text-white/90">Available for new projects</span>
                                 </motion.div>
 
@@ -64,7 +73,7 @@ export const HomePage = () => {
                                     initial={{ opacity: 0, y: 20 }}
                                     animate={{ opacity: 1, y: 0 }}
                                     transition={{ delay: 0.4 }}
-                                    className="text-xl md:text-2xl font-semibold text-electric-cyan drop-shadow-[0_2px_8px_rgba(0,0,0,0.7)]"
+                                    className="text-xl md:text-2xl font-semibold text-pink-500 drop-shadow-[0_2px_8px_rgba(224, 224, 224, 0.7)]"
                                 >
                                     Software Developer
                                 </motion.p>
@@ -119,10 +128,10 @@ export const HomePage = () => {
                                 featuredProjects
                                     .map(
                                         (project, index) => (
-                                            <ProjectCard 
-                                                key={project.id} 
-                                                project={project} 
-                                                index={index} 
+                                            <ProjectCard
+                                                key={project.id}
+                                                project={project}
+                                                index={index}
                                             />
                                         )
                                     )
@@ -130,6 +139,27 @@ export const HomePage = () => {
                         </div>
                     </div>
                 </section>
+
+{/* DISCLAIMER ALERT BUTTON */}
+                <DisclaimerAlert />
+
+                {/* STATS SECTION */}
+                <StatsSection />
+
+                {/* SERVICES SECTION */}
+                <ServicesSection />
+
+                {/* SKILLS SECTION */}
+                <SkillsSection />
+
+                {/* COMPANIES SLIDER SECTION */}
+                <CompanySlider />
+
+                {/* CTA SECTION */}
+                <CTASection />
+
+                {/* SCROLL TO THE TOP BUTTON */}
+                <ScrollToTop />
             </main>
         </>
     )
@@ -139,34 +169,35 @@ const featuredProjects: ProjectDetailsProps[] = [
     {
         id: "1",
         title: "Sani Enterprise (Voluntary Project)",
-        description: "A Full-stack e-cormmerce CMS project for selling furniture on the internet.",
+        description: "A Full-stack e-commerce CMS project for selling furniture on the internet.",
         image: sani_profile_image,
         tags: ["React JS", "TypeScript", "SpringBoot", "MySQL"],
         duration: "3 months",
         year: "2024",
-        liveUrl: "#",
+        liveUrl: "",
         githubUrl: "https://github.com/igris-marvin/sani.git",
     },
     {
         id: "2",
         title: "Pulse App (Tertiary Project)",
         description: "An emotion regulator app with an admin dashboard, music player and Adruino that reads a client's pulse.",
-        image: "",
+        image: pulse_app_profile_image,
         tags: ["PHP", "HTML", "Arduino", "MySQL"],
         duration: "4 months",
         year: "2024",
-        liveUrl: "#",
-        githubUrl: "https://github.com/igris-marvin/pulse_app_repo.git",
+        liveUrl: "",
+        githubUrl: "",
+        // githubUrl: "https://github.com/igris-marvin/pulse_app_repo.git",
     },
     {
         id: "3",
         title: "Eazy-Bookify",
         description: "A Full-stack Web Application with booking services for properties, vehicles and flights.",
-        image: "",
-        tags: ["React JS", "SpringBoot", "TypeScript", "Java"],
-        duration: "4 months",
+        image: ezby_profile_image,
+        tags: ["React JS", "SpringBoot", "Java", "Firebase"],
+        duration: "12 months",
         year: "2024 - 2025",
-        liveUrl: "#",
-        githubUrl: "#",
+        liveUrl: "",
+        githubUrl: "",
     },
 ];

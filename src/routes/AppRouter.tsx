@@ -1,6 +1,10 @@
 import { createHashRouter, createRoutesFromElements, Route, RouterProvider } from "react-router-dom"
 import { RootLayout } from "../layout/RootLayout"
 import { HomePage } from "../pages/HomePage"
+import { ProjectsPage } from "../pages/ProjectsPage"
+import { AboutPage } from "../pages/AboutPage"
+import { ContactPage } from "../pages/ContactPage"
+import { NotFoundPage } from "../pages/NotFoundPage"
 
 export const AppRouter = () => {
 
@@ -10,6 +14,11 @@ export const AppRouter = () => {
 
                 {/* HOME */}
                 <Route path="/" element={<HomePage />} />
+                <Route path="/projects" element={<ProjectsPage />} />
+                <Route path="/about" element={<AboutPage />} />
+                <Route path="/contact" element={<ContactPage />} />
+
+                <Route path="*" element={<NotFoundPage />} />
             </Route>
         )
     )
