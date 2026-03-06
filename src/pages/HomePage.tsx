@@ -1,144 +1,172 @@
-import { Tag } from "antd"
+import { motion } from "framer-motion"
+import background_image from "../assets/images/background_image.jpg"
+import sani_profile_image from "../assets/images/projects/sani_enterprise_profile_image.jpg"
+import { Sparkles } from "lucide-react"
+import SocialIcons from "../components/SocialIcons"
+import type { ProjectDetailsProps } from "../components/ProjectCard"
+import ProjectCard from "../components/ProjectCard"
 
 export const HomePage = () => {
 
     return (
         <>
-        <div className="home-main">
-            {/* <!-- Hero Section --> */}
-            <section className="hero">
-                <div className="container">
-                    {/* ROW */}
-                    <div className="row">
-                        {/* COLS */}
-                        <div className="col-9">
-                            {/* CONTENT */}
-                            <h1>Peter M.</h1>
-                            <p className="lead">Software Engineer | Problem Solver | Tech Enthusiast</p>
+            <main className="min-h-screen">
 
-                            <p>
-                                Lorem ipsum dolor sit amet consectetur adipisicing elit. Ab voluptate ipsam quis nostrum sequi. Culpa nobis quidem dolorem voluptatibus expedita
-                                molestiae rem? Soluta nulla autem error veniam obcaecati, inventore illum. Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolore laborum
-                                sequi tempora sed? Quo vitae harum nulla iusto sit modi laudantium sapiente. Tenetur, alias? Explicabo accusamus sunt aliquam iusto ullam? lorem
-                            </p>
+                {/* HERO [ SECTION ] */}
+                <section className="relative min-h-screen flex items-center justify-center overflow-hidden">
 
-                            {/* ICONS */}
-                            <div className="mb-3">
+                    {/* BACKGROUND IMAGE */}
+                    <div className="absolute inset-0">
 
-                                {/* row */}
-                                <div className="home-icons row text-center fs-3">
+                        <img
+                            src={background_image}
+                            alt="space background"
+                            className="w-full h-full object-cover"
+                        />
 
-                                    <div className="col">
-
-                                        <a href="mailto:malopepeter@yahoo.com">
-                                            <i className="bi bi-envelope-at-fill"></i>
-                                        </a>
-
-                                    </div>
-                                    <div className="col">
-
-                                        <a href="https://www.linkedin.com/in/peter-malope-a578242bb/">
-                                            <i className="bi bi-linkedin"></i>
-                                        </a>
-
-                                    </div>
-                                    <div className="col">
-
-                                        <a href="https://github.com/igris-marvin">
-                                            <i className="bi bi-github"></i>
-                                        </a>
-
-                                    </div>
-                                    <div className="col">
-
-                                        <a href="https://www.google.com">
-                                            <i className="bi bi-instagram"></i>
-                                        </a>
-
-                                    </div>
-
-                                </div>
-
-                            </div>
-                        </div>
-
-                        <div className="col-3">
-                            {/* EMPTY */}
-                        </div>
-                    </div>
-                </div>
-            </section>
-
-            {/* <!-- Introduction & Goal --> */}
-            <section className="container py-2 mt-5 shadow shadow-sm">
-                <h2 className="section-title">About Me</h2>
-                <p>
-                    I'm a passionate software engineer with a strong foundation in computer science and a love for building scalable, user-centric applications. My goal is to contribute to impactful tech projects while continuously growing my skills in modern development frameworks and best practices.
-                </p>
-            </section>
-
-            <section className="container py-5">
-                    <h2 className="section-title">Skills</h2>
-                    <div>
-                        <Tag style={
-                            {
-                                fontSize: "15px"
-                            }
-                        } color="blue">Java &bull; JavaScript &bull; TypeScript &bull; Firebase &bull; HTML &bull; JSP &bull; Kotlin &bull; PHP &bull; Python &bull; PostgreSQL &bull; Thymeleaf</Tag>
-                        <Tag style={
-                            {
-                                fontSize: "15px"
-                            }
-                        } color="green">Spring Boot 3 &bull; Java Enterprise Edition</Tag>
-                        <Tag style={
-                            {
-                                fontSize: "15px"
-                            }
-                        } color="cyan">React JS &bull; Node JS (Express JS)</Tag>
-                        <Tag style={
-                            {
-                                fontSize: "15px"
-                            }
-                        } color="volcano">Visual Studio Code &bull; IntelliJ &bull; Android Studio &bull; NetBeans &bull; GitHub &bull; Jetpack Compose &bull; Docker &bull; Wondershare Edraw Max &bull; CPanel &bull; Postman</Tag>
-                        <Tag style={
-                            {
-                                fontSize: "15px"
-                            }
-                        } color="purple">Object-Oriented Programming &bull; Data Structures &bull; Algorithms &bull; Database Principles &bull; Computer Science Principles &bull; Asynchronous/Reactive Patterns</Tag>
-                        <Tag style={
-                            {
-                                fontSize: "15px"
-                            }
-                        } color="magenta">Visual Studio Code &bull; IntelliJ &bull; Android Studio &bull; NetBeans &bull; GitHub &bull; Jetpack Compose &bull; Docker &bull; Wondershare Edraw Max &bull; CPanel &bull; Postman</Tag>
+                        {/* GRADIENT */}
+                        <div className="absolute inset-0 bg-gradient-to-b from-transparent via-transparent via-30% to-background" />
 
                     </div>
+
+                    {/* CONTENT */}
+
+                    <div className="relative z-10 mx-auto max-w-7x1 px-6 pt-60">
+                        <div className="grid lg:grid-cols-2 gap-12 items-center">
+                            {/* Left - Text Content */}
+                            <motion.div
+                                initial={{ opacity: 0, x: -50 }}
+                                animate={{ opacity: 1, x: 0 }}
+                                transition={{ duration: 0.8 }}
+                                className="space-y-6"
+                            >
+                                <motion.div
+                                    initial={{ opacity: 0, y: 20 }}
+                                    animate={{ opacity: 1, y: 0 }}
+                                    transition={{ delay: 0.2 }}
+                                    className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-white/10 backdrop-blur-sm border border-white/20"
+                                >
+                                    <Sparkles size={16} className="text-electric-cyan" />
+                                    <span className="text-sm text-white/90">Available for new projects</span>
+                                </motion.div>
+
+                                <motion.h1
+                                    initial={{ opacity: 0, y: 20 }}
+                                    animate={{ opacity: 1, y: 0 }}
+                                    transition={{ delay: 0.3 }}
+                                    className="font-display text-5xl md:text-7xl font-bold leading-tight text-white drop-shadow-[0_2px_10px_rgba(0,0,0,0.8)]"
+                                >
+                                    Hi, I'm Peter Malope
+                                    {/* <span className="text-gradient-cosmic">Your Name</span> */}
+                                </motion.h1>
+
+                                <motion.p
+                                    initial={{ opacity: 0, y: 20 }}
+                                    animate={{ opacity: 1, y: 0 }}
+                                    transition={{ delay: 0.4 }}
+                                    className="text-xl md:text-2xl font-semibold text-electric-cyan drop-shadow-[0_2px_8px_rgba(0,0,0,0.7)]"
+                                >
+                                    Software Developer
+                                </motion.p>
+
+                                <motion.p
+                                    initial={{ opacity: 0, y: 20 }}
+                                    animate={{ opacity: 1, y: 0 }}
+                                    transition={{ delay: 0.5 }}
+                                    className="text-lg text-white/90 max-w-lg drop-shadow-[0_1px_6px_rgba(0,0,0,0.8)]"
+                                >
+                                    I craft elegant digital solutions that bridge creativity and technology.
+                                    Specializing in full-stack development with a passion for clean code and
+                                    exceptional user experiences.
+                                </motion.p>
+
+                                <motion.div
+                                    initial={{ opacity: 0, y: 20 }}
+                                    animate={{ opacity: 1, y: 0 }}
+                                    transition={{ delay: 0.6 }}
+                                >
+                                    <SocialIcons variant="hero" size="md" />
+                                </motion.div>
+                            </motion.div>
+
+                            {/* Right - Empty space for background focus */}
+                            <div className="hidden lg:block" />
+                        </div>
+
+                    </div>
+
                 </section>
 
-            {/* <!-- Projects --> */}
-            <section className="container">
-                <h2 className="section-title">Projects</h2>
-                <div className="row">
-                    <div className="col-md-6 mb-4">
-                        <div className="card">
-                            <div className="card-body">
-                                <h5 className="card-title">Multi Service Booking Web Application</h5>
-                                <p className="card-text">A responsive personal website showcasing my skills, projects, and contact info. Built with Bootstrap and deployed on GitHub Pages.</p>
-                            </div>
-                        </div>
-                    </div>
-                    <div className="col-md-6 mb-4">
-                        <div className="card">
-                            <div className="card-body">
-                                <h5 className="card-title">Sani-Enterprise E-commerce (Volunteer Project)</h5>
-                                <p className="card-text">A real-time chat application using Firebase Authentication and Firestore, with React for the frontend.</p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </section>
+                {/* FEATURED [ PROJECTS ] */}
+                <section className="py-20">
+                    <div className="mx-auto max-w-7xl px-6">
+                        <motion.div
+                            initial={{ opacity: 0, y: 20 }}
+                            whileInView={{ opacity: 1, y: 0 }}
+                            viewport={{ once: true }}
+                            className="text-center mb-12"
+                        >
+                            <h2 className="font-display text-3xl md:text-4xl font-bold mb-4">
+                                Featured <span className="text-gradient-cosmic">Projects</span>
+                            </h2>
+                            <p className="text-muted-foreground max-w-2xl mx-auto">
+                                A selection of my most impactful work showcasing full-stack expertise
+                            </p>
+                        </motion.div>
 
-            
-        </div>
+                        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+                            {
+                                featuredProjects
+                                    .map(
+                                        (project, index) => (
+                                            <ProjectCard 
+                                                key={project.id} 
+                                                project={project} 
+                                                index={index} 
+                                            />
+                                        )
+                                    )
+                            }
+                        </div>
+                    </div>
+                </section>
+            </main>
         </>
     )
 }
+
+const featuredProjects: ProjectDetailsProps[] = [
+    {
+        id: "1",
+        title: "Sani Enterprise (Voluntary Project)",
+        description: "A Full-stack e-cormmerce CMS project for selling furniture on the internet.",
+        image: sani_profile_image,
+        tags: ["React JS", "TypeScript", "SpringBoot", "MySQL"],
+        duration: "3 months",
+        year: "2024",
+        liveUrl: "#",
+        githubUrl: "https://github.com/igris-marvin/sani.git",
+    },
+    {
+        id: "2",
+        title: "Pulse App (Tertiary Project)",
+        description: "An emotion regulator app with an admin dashboard, music player and Adruino that reads a client's pulse.",
+        image: "",
+        tags: ["PHP", "HTML", "Arduino", "MySQL"],
+        duration: "4 months",
+        year: "2024",
+        liveUrl: "#",
+        githubUrl: "https://github.com/igris-marvin/pulse_app_repo.git",
+    },
+    {
+        id: "3",
+        title: "Eazy-Bookify",
+        description: "A Full-stack Web Application with booking services for properties, vehicles and flights.",
+        image: "",
+        tags: ["React JS", "SpringBoot", "TypeScript", "Java"],
+        duration: "4 months",
+        year: "2024 - 2025",
+        liveUrl: "#",
+        githubUrl: "#",
+    },
+];
