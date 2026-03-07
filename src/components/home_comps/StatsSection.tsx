@@ -30,7 +30,7 @@ const StatsSection = () => {
 const stats = [
   { label: "Years of Learning", value: 5, suffix: "+" },
   { label: "Projects Completed", value: 3, suffix: "+" },
-  { label: "technical Skills", value: 22, suffix: "+" },
+  { label: "Technical Skills", value: 22, suffix: "+" },
   { label: "Lines of Code", value: 250, suffix: "K+" },
   // Years of Experience
   // Happy Clients

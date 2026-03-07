@@ -120,10 +120,10 @@ export const ContactPage = () => {
             <div className="light-card p-8 rounded-lg border-2 border-border">
               <div className="mb-8">
                 <h2 className="font-display text-2xl font-semibold mb-2">
-                  Send a Message
+                  {/* Send a Message */}
                 </h2>
                 <p className="text-muted-foreground">
-                  Fill out the form below and I'll get back to you as soon as possible.
+                  Under Maintenance
                 </p>
               </div>
               <ContactForm />

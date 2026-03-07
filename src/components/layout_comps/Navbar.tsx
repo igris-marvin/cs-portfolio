@@ -17,11 +17,11 @@ const Navbar = () => {
   return (
     <nav className="fixed top-0 left-0 right-0 z-50">
       <div className="w-full">
-        <div className="bg-midnight border-b border-white/10 px-6 py-3 flex items-center justify-between">
+        <div className="bg-gray-950 border-b border-white/10 px-6 py-3 flex items-center justify-between">
           {/* Logo */}
           <Link to="/" className="flex items-center">
-            <div className="w-10 h-10 rounded-md bg-gradient-to-br from-primary to-accent flex items-center justify-center">
-              <span className="font-display font-bold text-lg text-white">YN</span>
+            <div className="w-10 h-10 rounded-sm bg-linear-to-br from-primary to-accent flex items-center justify-center">
+              <span className="font-display font-bold text-lg text-pink-500">MP</span>
             </div>
           </Link>
 
@@ -31,17 +31,17 @@ const Navbar = () => {
               <Link
                 key={link.path}
                 to={link.path}
-                className={`relative font-medium transition-all px-3 py-1.5 rounded-md ${
+                className={`relative font-medium transition-all px-3 py-1.5 rounded-sm border-pink-500 border-1 ${
                   location.pathname === link.path 
-                    ? "bg-white/10 text-white" 
-                    : "text-midnight-foreground/80 hover:text-white hover:bg-white/5"
+                    ? "bg-gray-950 text-white hover:text-white border-white" 
+                    : "text-pink-500 hover:text-white hover:bg-white/5 hover:border-white"
                 }`}
               >
                 {link.name}
                 {location.pathname === link.path && (
                   <motion.div
                     layoutId="activeNav"
-                    className="absolute inset-0 rounded-md border border-white/20"
+                    className="absolute inset-0 rounded-sm border border-white/20"
                     transition={{ type: "spring", stiffness: 380, damping: 30 }}
                   />
                 )}
@@ -52,9 +52,9 @@ const Navbar = () => {
           {/* Mobile Menu Button */}
           <button
             onClick={() => setIsOpen(!isOpen)}
-            className="md:hidden p-2 rounded-md hover:bg-white/10 transition-colors text-midnight-foreground"
+            className="md:hidden p-2 rounded-sm hover:bg-white/10 transition-colors text-pink-500"
           >
-            {isOpen ? <X size={24} /> : <Menu size={24} />}
+            {isOpen ? <X size={24} /> : <Menu size={24} className="text-pink-500 hover:text-white" />}
           </button>
         </div>
 
@@ -65,17 +65,17 @@ const Navbar = () => {
               initial={{ opacity: 0, y: -20 }}
               animate={{ opacity: 1, y: 0 }}
               exit={{ opacity: 0, y: -20 }}
-              className="md:hidden bg-midnight mt-2 rounded-lg p-4 border border-white/10"
+              className="md:hidden bg-gray-950 mt-2 rounded-sm p-4 border border-white/10"
             >
               {navLinks.map((link) => (
                 <Link
                   key={link.path}
                   to={link.path}
                   onClick={() => setIsOpen(false)}
-                  className={`block py-3 px-4 rounded-md transition-colors ${
+                  className={`block py-3 px-4 rounded-sm transition-colors ${
                     location.pathname === link.path
-                      ? "bg-white/10 text-white"
-                      : "text-midnight-foreground/80 hover:bg-white/5 hover:text-white"
+                      ? "bg-white/10 text-pink-500 hover:text-white"
+                      : "text-pink-500 hover:bg-white/5 hover:text-white"
                   }`}
                 >
                   {link.name}

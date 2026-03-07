@@ -1,9 +1,9 @@
 import { motion } from "framer-motion"
 import { Sparkles } from "lucide-react"
-import background_image from "../assets/images/background_image.jpg"
+import background_image from "../assets/images/background_image.webp"
 import ezby_profile_image from "../assets/images/projects/ezby_profile_image.svg"
-import pulse_app_profile_image from "../assets/images/projects/pulse_app_profile_image.png"
-import sani_profile_image from "../assets/images/projects/sani_enterprise_profile_image.jpg"
+import pulse_app_profile_image from "../assets/images/projects/pulse_app_profile_image.webp"
+import sani_profile_image from "../assets/images/projects/sani_enterprise_profile_image.webp"
 import type { ProjectDetailsProps } from "../components/ProjectCard"
 import ProjectCard from "../components/ProjectCard"
 import SocialIcons from "../components/SocialIcons"
@@ -11,15 +11,20 @@ import ServicesSection from "../components/home_comps/ServicesSection"
 import SkillsSection from "../components/home_comps/SkillsSection"
 import StatsSection from "../components/home_comps/StatsSection"
 import CTASection from "../components/home_comps/CTASection"
-import CompanySlider from "../components/home_comps/CompanySlider"
-import ScrollToTop from "../components/home_comps/ScrollToTop"
+// import CompanySlider from "../components/home_comps/CompanySlider"
+// import ScrollToTop from "../components/home_comps/ScrollToTop"
 import { DisclaimerAlert } from "../components/temp_comps/DisclaimerAlert"
 
 export const HomePage = () => {
 
     return (
         <>
+
             <main className="min-h-screen">
+                {/* TODO remove ALERT */}
+
+                {/* DISCLAIMER ALERT BUTTON */}
+                <DisclaimerAlert />
 
                 {/* HERO [ SECTION ] */}
                 <section className="relative min-h-screen flex items-center justify-center overflow-hidden">
@@ -31,10 +36,18 @@ export const HomePage = () => {
                             src={background_image}
                             alt="space background"
                             className="w-full h-full object-cover"
+
+                            // srcSet="image-400.jpg 400w, image-800.jpg 800w, image-1200.jpg 1200w" 
+                            sizes="(max-width: 600px) 400px, (max-width: 1200px) 800px, 1200px"
+                            decoding="async"
+                            loading="lazy"
+                            referrerPolicy="no-referrer"
+                            fetchPriority="low"
+                            crossOrigin="anonymous"
                         />
 
                         {/* GRADIENT */}
-                        <div className="absolute inset-0 bg-gradient-to-b from-transparent via-transparent via-30% to-background" />
+                        <div className="absolute inset-0 bg-linear-to-b from-transparent via-transparent via-30% to-background" />
 
                     </div>
 
@@ -84,9 +97,9 @@ export const HomePage = () => {
                                     transition={{ delay: 0.5 }}
                                     className="text-lg text-white/90 max-w-lg drop-shadow-[0_1px_6px_rgba(0,0,0,0.8)]"
                                 >
-                                    I craft elegant digital solutions that bridge creativity and technology.
-                                    Specializing in full-stack development with a passion for clean code and
-                                    exceptional user experiences.
+                                    I build digital solutions that merge creativity with technology. My focus spans
+                                    full-stack development, working with databases, managing data, and writing clean code
+                                    to deliver reliable and efficient systems.
                                 </motion.p>
 
                                 <motion.div
@@ -119,7 +132,7 @@ export const HomePage = () => {
                                 Featured <span className="text-gradient-cosmic">Projects</span>
                             </h2>
                             <p className="text-muted-foreground max-w-2xl mx-auto">
-                                A selection of my most impactful work showcasing full-stack expertise
+                                A selection of my projects that showcase my development skills
                             </p>
                         </motion.div>
 
@@ -140,9 +153,6 @@ export const HomePage = () => {
                     </div>
                 </section>
 
-{/* DISCLAIMER ALERT BUTTON */}
-                <DisclaimerAlert />
-
                 {/* STATS SECTION */}
                 <StatsSection />
 
@@ -153,13 +163,13 @@ export const HomePage = () => {
                 <SkillsSection />
 
                 {/* COMPANIES SLIDER SECTION */}
-                <CompanySlider />
+                {/* <CompanySlider /> */}
 
                 {/* CTA SECTION */}
                 <CTASection />
 
                 {/* SCROLL TO THE TOP BUTTON */}
-                <ScrollToTop />
+                {/* <ScrollToTop />  */}
             </main>
         </>
     )

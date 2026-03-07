@@ -1,10 +1,13 @@
 import { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
-import { ChevronDown, ChevronUp, Sparkles, Rocket, Beaker, Calendar, GraduationCap, Briefcase, Code2, Layers } from "lucide-react";
+import { ChevronDown, ChevronUp, Sparkles, Rocket, Calendar, GraduationCap, Code2, Layers } from "lucide-react";
 import ProjectCard, { type ProjectDetailsProps } from "../components/ProjectCard";
 import TechSlider from "../components/projects_comps/TechSlider";
-import CurrentlyBuilding from "../components/projects_comps/CurrentlyBuilding";
+// import CurrentlyBuilding from "../components/projects_comps/CurrentlyBuilding";
 import ScrollToTop from "../components/home_comps/ScrollToTop";
+import ezby_profile_image from "../assets/images/projects/ezby_profile_image.svg"
+import pulse_app_profile_image from "../assets/images/projects/pulse_app_profile_image.webp"
+import sani_profile_image from "../assets/images/projects/sani_enterprise_profile_image.webp"
 
 
 export const ProjectsPage = () => {
@@ -22,26 +25,26 @@ export const ProjectsPage = () => {
                         animate={{ opacity: 1, y: 0 }}
                         className="text-center mb-16"
                     >
-                        <motion.div
+                        {/* <motion.div
                             initial={{ opacity: 0, y: 20 }}
                             animate={{ opacity: 1, y: 0 }}
                             transition={{ delay: 0.1 }}
                             className="inline-flex items-center gap-2 px-4 py-2 rounded-md bg-primary/10 border border-primary/20 mb-6"
                         >
                             <Rocket size={16} className="text-primary" />
-                            <span className="text-sm text-muted-foreground">Shipped & Deployed</span>
-                        </motion.div>
+                            <span className="text-sm text-muted-foreground">Completed</span>
+                        </motion.div> */}
                         <h1 className="font-display text-4xl md:text-5xl font-bold mb-4">
-                            My <span className="text-gradient-cosmic">Projects</span>
+                            <span className="text-gradient-cosmic">Projects</span>
                         </h1>
                         <p className="text-muted-foreground max-w-2xl mx-auto text-lg">
-                            A curated collection of projects that showcase my technical expertise,
+                            A collection of projects that showcase my technical expertise,
                             problem-solving abilities, and passion for building impactful solutions.
                         </p>
                     </motion.div>
 
                     {/* Currently Building Section */}
-                    <CurrentlyBuilding />
+                    {/* <CurrentlyBuilding /> */}
 
                     {/* Projects Grid */}
                     <section className="mb-20">
@@ -53,13 +56,13 @@ export const ProjectsPage = () => {
                         >
                             <div className="inline-flex items-center gap-2 px-4 py-2 rounded-md bg-primary/10 border border-primary/20 mb-6">
                                 <Rocket size={16} className="text-primary" />
-                                <span className="text-sm text-muted-foreground">Shipped & Deployed</span>
+                                <span className="text-sm text-muted-foreground">Completed</span>
                             </div>
                             <h2 className="font-display text-3xl md:text-4xl font-bold mb-4">
                                 Completed <span className="text-gradient-cosmic">Projects</span>
                             </h2>
                             <p className="text-muted-foreground max-w-2xl mx-auto">
-                                Production-ready applications that are live and serving users.
+                                Projects that i had a part as a developing in collaboration.
                             </p>
                         </motion.div>
 
@@ -109,7 +112,7 @@ export const ProjectsPage = () => {
                                 Tech <span className="text-gradient-cosmic">Stack</span>
                             </h2>
                             <p className="text-muted-foreground max-w-2xl mx-auto">
-                                Proficient in a wide range of modern technologies, continuously expanding my expertise.
+                                I am proficient in a wide range of modern technologies, continuously expanding my expertise.
                             </p>
                         </motion.div>
 
@@ -134,8 +137,8 @@ export const ProjectsPage = () => {
                         <TechSlider />
                     </section>
 
-                    {/* Experimental Zone */}
-                    <section className="mb-20">
+                    {/* EXPERIMENTAL ZONE */}
+                    {/* <section className="mb-20">
                         <motion.div
                             initial={{ opacity: 0, y: 20 }}
                             whileInView={{ opacity: 1, y: 0 }}
@@ -179,7 +182,7 @@ export const ProjectsPage = () => {
                                 </motion.div>
                             ))}
                         </div>
-                    </section>
+                    </section> */}
 
                     {/* Tech Stack Timeline - No Accordion */}
                     <section>
@@ -263,157 +266,101 @@ export const ProjectsPage = () => {
 const allProjects: ProjectDetailsProps[] = [
     {
         id: "1",
-        title: "Cloud Dashboard",
-        description: "A real-time analytics dashboard for monitoring cloud infrastructure with advanced visualizations and alerting systems.",
-        image: "https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=600&q=80",
-        tags: ["React", "TypeScript", "D3.js", "AWS", "WebSocket"],
+        title: "Sani Enterprise (Voluntary Project)",
+        description: "A Full-stack e-commerce CMS project for selling furniture on the internet.",
+        image: sani_profile_image,
+        tags: ["React JS", "TypeScript", "SpringBoot", "MySQL"],
         duration: "3 months",
         year: "2024",
-        date: "Jan 2024 - Mar 2024",
+        date: "Feb 2024 - Apr 2024",
         liveUrl: "#",
-        githubUrl: "#",
-        codeSnippet: `const useRealTimeData = (endpoint: string) => {
-  const [data, setData] = useState(null);
-  
-  useEffect(() => {
-    const ws = new WebSocket(endpoint);
-    ws.onmessage = (event) => {
-      setData(JSON.parse(event.data));
-    };
-    return () => ws.close();
-  }, [endpoint]);
-  
-  return data;
-};`,
-    },
-    {
-        id: "2",
-        title: "E-Commerce Platform",
-        description: "Full-stack marketplace with payment processing, inventory management, and comprehensive admin dashboard.",
-        image: "https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?w=600&q=80",
-        tags: ["Next.js", "Stripe", "PostgreSQL", "Tailwind", "Prisma"],
-        duration: "6 months",
-        year: "2024",
-        date: "Jun 2023 - Dec 2023",
-        liveUrl: "#",
-        githubUrl: "#",
-        codeSnippet: `async function processPayment(cart: CartItem[]) {
-  const session = await stripe.checkout.sessions.create({
-    payment_method_types: ['card'],
-    line_items: cart.map(item => ({
-      price: item.priceId,
-      quantity: item.quantity,
-    })),
-    mode: 'payment',
-  });
-  return session;
+        githubUrl: "https://github.com/igris-marvin/sani",
+        codeSnippet: `@RestController
+@RequestMapping("/api/products")
+public class ProductController {
+
+    @GetMapping
+    public Flux<List<Product>> getAllProducts() {
+        return productService
+                    .getAllProducts();
+    }
+        
+    @PostMapping("/create")
+    public Mono<Product> createProduct(@RequestBody Product product) {
+        return productService
+                    .createProduct(product);
+    }
 }`,
     },
     {
-        id: "3",
-        title: "AI Chat Assistant",
-        description: "Intelligent conversational AI with natural language processing, context awareness, and memory persistence.",
-        image: "https://images.unsplash.com/photo-1677442136019-21780ecad995?w=600&q=80",
-        tags: ["Python", "OpenAI", "FastAPI", "React", "LangChain"],
+        id: "2",
+        title: "Pulse App",
+        description: "An emotion regulator app with an admin dashboard, music player and Adruino that reads a client's pulse.",
+        image: pulse_app_profile_image,
+        tags: ["PHP", "HTML", "Arduino", "MySQL"],
         duration: "4 months",
-        year: "2023",
-        date: "Aug 2023 - Nov 2023",
-        liveUrl: "#",
-        githubUrl: "#",
-        codeSnippet: `async def generate_response(
-    query: str, 
-    context: list[Message]
-) -> str:
-    response = await openai.chat.completions.create(
-        model="gpt-4",
-        messages=[*context, {"role": "user", "content": query}],
-        temperature=0.7,
-    )
-    return response.choices[0].message.content`,
-    },
-    {
-        id: "4",
-        title: "Task Management App",
-        description: "Collaborative project management tool with real-time updates, Kanban boards, and team analytics.",
-        image: "https://images.unsplash.com/photo-1611224923853-80b023f02d71?w=600&q=80",
-        tags: ["React", "Node.js", "Socket.io", "MongoDB"],
-        duration: "2 months",
-        year: "2023",
-        date: "May 2023 - Jul 2023",
-        liveUrl: "#",
-        githubUrl: "#",
-        codeSnippet: `socket.on('task:update', (task: Task) => {
-  dispatch({
-    type: 'UPDATE_TASK',
-    payload: task,
-  });
-});`,
-    },
-    {
-        id: "5",
-        title: "Portfolio Website",
-        description: "Personal portfolio with cosmic space theme, smooth animations, and interactive elements.",
-        image: "https://images.unsplash.com/photo-1467232004584-a241de8bcf5d?w=600&q=80",
-        tags: ["React", "Framer Motion", "Tailwind", "TypeScript"],
-        duration: "1 month",
         year: "2024",
-        date: "Dec 2024",
+        date: "Feb 2024 - May 2024",
         liveUrl: "#",
         githubUrl: "#",
+        codeSnippet: ``,
     },
     {
-        id: "6",
-        title: "API Gateway Service",
-        description: "High-performance API gateway with rate limiting, caching, and request transformation.",
-        image: "https://images.unsplash.com/photo-1558494949-ef010cbdcc31?w=600&q=80",
-        tags: ["Go", "Redis", "Docker", "Kubernetes"],
-        duration: "5 months",
-        year: "2023",
-        date: "Jan 2023 - May 2023",
+        id: "3",
+        title: "Eazy-Bookify",
+        description: "A Full-stack Web Application with booking services for properties, vehicles and flights.",
+        image: ezby_profile_image,
+        tags: ["React JS", "SpringBoot", "Socket", "Firebase"],
+        duration: "4 months",
+        year: "2024 - 2025",
+        date: "Aug 2024 - July 2025",
         liveUrl: "#",
         githubUrl: "#",
-    },
+        codeSnippet: ``,
+    }
 ];
 
 const techStack = [
-    "TypeScript", "React", "Next.js", "Node.js", "Python", "Go",
-    "PostgreSQL", "MongoDB", "Redis", "Docker", "AWS", "Kubernetes",
+    "Java", "JavaScript", "TypeScript", "PHP", 
+    "SpringBoot", "React JS", "Node JS", "Express JS",
+    "MySQL", "MariaDB", "PostgreSQL", "MongoDB", "Firebase",
+    "Virtual Studio Code", "IntelliJ IDEA", "GitHub", "Postman",
 ];
 
-const experimentalProjects = [
-    { name: "WASM Compiler", tech: ["Rust", "WebAssembly"] },
-    { name: "Reactive State Engine", tech: ["Signals", "Fine-grained Reactivity"] },
-    { name: "AI Code Review Bot", tech: ["LLM", "AST Parsing"] },
-    { name: "3D Portfolio v2", tech: ["Three.js", "React Fiber"] },
-];
+// const experimentalProjects = [
+//     { name: "WASM Compiler", tech: ["Rust", "WebAssembly"] },
+//     { name: "Reactive State Engine", tech: ["Signals", "Fine-grained Reactivity"] },
+//     { name: "AI Code Review Bot", tech: ["LLM", "AST Parsing"] },
+//     { name: "3D Portfolio v2", tech: ["Three.js", "React Fiber"] },
+// ];
 
 const timelineData = [
     {
         period: "University",
-        date: "2015 - 2019",
+        date: "2021 - 2024",
         icon: GraduationCap,
-        items: ["Java", "OracleDB", "OOP fundamentals", "Data Structures"],
+        items: ["Java", "OracleDB", "OOP fundamentals", "Data Structures", "Algorithms"],
         description: "Built the foundation of computer science knowledge through rigorous coursework and hands-on projects.",
     },
     {
-        period: "Internship Prep",
-        date: "2019 - 2020",
+        period: "Work Integrated Learning",
+        date: "2024 - 2025",
         icon: Code2,
-        items: ["React", "Node.js", "Firebase", "Async patterns", "REST APIs"],
-        description: "Self-taught modern web technologies to prepare for real-world development challenges.",
+        items: ["React JS", "Node.js", "TypeScript", "Firebase", "Asynchronous Programming", "Reactive Programming"],
+        description: "Learned modern web technologies to prepare for real-world development challenges.",
     },
     {
         period: "Personal Projects",
-        date: "2020 - 2022",
+        date: "2024 - Present",
         icon: Layers,
-        items: ["TypeScript", "UI/UX polish", "Edge-case handling", "Testing"],
+        items: ["TypeScript", "UI/UX Design", "Responsive Design", "UI/UX Libraries"],
         description: "Refined skills through building and shipping personal projects with production-level quality.",
     },
-    {
-        period: "Professional",
-        date: "2022 - Present",
-        icon: Briefcase,
-        items: ["Cloud Architecture", "DevOps", "System Design", "Leadership"],
-        description: "Expanded into architecture and team leadership while staying hands-on with modern tech stack.",
-    },
+    // {
+    //     period: "Professional",
+    //     date: "2022 - Present",
+    //     icon: Briefcase,
+    //     items: ["Cloud Architecture", "DevOps", "System Design", "Leadership"],
+    //     description: "Expanded into architecture and team leadership while staying hands-on with modern tech stack.",
+    // },
 ];

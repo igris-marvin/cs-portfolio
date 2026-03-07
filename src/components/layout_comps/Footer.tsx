@@ -13,7 +13,7 @@ const Footer = () => {
   const currentYear = new Date().getFullYear();
 
   return (
-    <footer className="relative mt-20 border-t border-white/10 bg-midnight text-midnight-foreground">
+    <footer className="relative mt-20 border-t border-white/10 bg-midnight text-white bg-gray-900">
       <div className="relative mx-auto max-w-7xl px-6 py-16">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
           {/* Left Column - Info & Socials */}
@@ -21,14 +21,14 @@ const Footer = () => {
             {/* Logo */}
             <Link to="/" className="flex items-center gap-2">
               <div className="w-12 h-12 rounded-md bg-gradient-to-br from-primary to-accent flex items-center justify-center">
-                <span className="font-display font-bold text-xl text-white">YN</span>
+                <span className="font-display font-bold text-xl text-pink-500">MP</span>
               </div>
-              <span className="font-display font-semibold text-xl text-white">
-                Your<span className="text-gradient-cosmic">Name</span>
+              <span className="font-display font-semibold text-xl text-pink-500">
+                <span className="text-gradient-cosmic">Peter Malope</span>
               </span>
             </Link>
-
-            <p className="text-midnight-foreground/70 max-w-md">
+{/*  */}
+            <p className="text- max-w-md">
               Crafting digital experiences through code. Passionate about building 
               innovative solutions that make a difference.
             </p>
@@ -56,7 +56,7 @@ const Footer = () => {
             </div>
 
             {/* Social Icons */}
-            <div className="flex gap-4">
+            <div className="flex gap-4 text-pink-500">
               {socialLinks.map((social) => (
                 <motion.a
                   key={social.label}
@@ -76,7 +76,7 @@ const Footer = () => {
 
           {/* Right Column - Quick Links */}
           <div className="space-y-6">
-            <h3 className="font-display text-xl font-semibold text-white">Quick Links</h3>
+            <h3 className="font-display text-xl font-semibold text-pink-500">Quick Links</h3>
             <div className="grid grid-cols-2 gap-4">
               <Link 
                 to="/" 

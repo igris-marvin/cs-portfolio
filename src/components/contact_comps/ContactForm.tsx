@@ -127,7 +127,8 @@ const ContactForm = ({ compact = false }: ContactFormProps) => {
 
       <motion.button
         type="submit"
-        disabled={isSubmitting || isSubmitted}
+        // disabled={isSubmitting || isSubmitted}
+        disabled={true}
         whileHover={{ scale: 1.02 }}
         whileTap={{ scale: 0.98 }}
         className={`w-full py-3 px-6 rounded-xl font-semibold flex items-center justify-center gap-2 transition-all disabled:opacity-70 ${

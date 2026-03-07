@@ -1,7 +1,7 @@
 import { motion } from "framer-motion";
 import { MapPin, Briefcase, GraduationCap, Heart } from "lucide-react";
-import SocialIcons from "../components/about_comps/SocialIcons";
-import dev_profile from "../assets/images/dev/mpmalope.jpg"
+import SocialIcons from "../components/SocialIcons";
+import dev_profile from "../assets/images/dev/mpmalope.webp"
 
 export const AboutPage = () => {
 
@@ -25,6 +25,14 @@ export const AboutPage = () => {
                                     src={dev_profile}
                                     alt="Dev Profile Image"
                                     className="w-full h-full object-cover"
+
+                                    // srcSet="image-400.jpg 400w, image-800.jpg 800w, image-1200.jpg 1200w" 
+                                    sizes="(max-width: 600px) 400px, (max-width: 1200px) 800px, 1200px" 
+                                    decoding="async"
+                                    loading="lazy"
+                                    referrerPolicy="no-referrer"
+                                    fetchPriority="low"
+                                    crossOrigin="anonymous"
                                 />
                                 <div className="absolute inset-0 bg-gradient-to-t from-background via-transparent to-transparent" />
                                 <div className="absolute inset-0 bg-gradient-to-r from-background/30 to-transparent" />

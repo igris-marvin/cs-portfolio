@@ -2,27 +2,27 @@ import { motion } from "framer-motion";
 import { 
   Code, 
   Database, 
-  Cloud, 
+  // Cloud, 
   Terminal, 
-  Cpu, 
+  // Cpu, 
   GitBranch,
   Layers,
   Zap,
-  Globe,
-  Shield
+  // Globe,
+  // Shield
 } from "lucide-react";
 
 const tools = [
   { name: "VS Code", icon: Code },
   { name: "Git", icon: GitBranch },
   { name: "Docker", icon: Layers },
-  { name: "AWS", icon: Cloud },
-  { name: "PostgreSQL", icon: Database },
+  // { name: "AWS", icon: Cloud },
+  { name: "MySQL", icon: Database },
   { name: "Terminal", icon: Terminal },
-  { name: "Kubernetes", icon: Cpu },
+  // { name: "Kubernetes", icon: Cpu },
   { name: "Vercel", icon: Zap },
-  { name: "Cloudflare", icon: Globe },
-  { name: "Auth0", icon: Shield },
+  // { name: "Cloudflare", icon: Globe },
+  // { name: "Auth0", icon: Shield },
 ];
 
 const TechSlider = () => {

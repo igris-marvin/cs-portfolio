@@ -1,5 +1,5 @@
 import { motion } from "framer-motion";
-import { Github, Linkedin, Twitter, Mail } from "lucide-react";
+import { Github, Linkedin, Mail } from "lucide-react";
 
 interface SocialIconsProps {
   variant?: "hero" | "default" | "filled";
@@ -7,10 +7,10 @@ interface SocialIconsProps {
 }
 
 const socialLinks = [
-  { icon: Github, href: "https://github.com", label: "GitHub" },
-  { icon: Linkedin, href: "https://linkedin.com", label: "LinkedIn" },
-  { icon: Twitter, href: "https://twitter.com", label: "Twitter" },
-  { icon: Mail, href: "mailto:your@email.com", label: "Email" },
+  { icon: Github, href: "https://github.com/igris-marvin", label: "GitHub" },
+  { icon: Linkedin, href: "https://www.linkedin.com/in/peter-malope-a578242bb", label: "LinkedIn" },
+  // { icon: Twitter, href: "https://twitter.com", label: "Twitter" },
+  { icon: Mail, href: "mailto:mpmalope03@email.com", label: "Email" },
 ];
 
 const SocialIcons = ({ variant = "default", size = "md" }: SocialIconsProps) => {
