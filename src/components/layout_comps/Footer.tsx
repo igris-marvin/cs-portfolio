@@ -6,7 +6,7 @@ const socialLinks = [
   { icon: Github, href: "https://github.com/igris-marvin", label: "GitHub" },
   { icon: Linkedin, href: "https://www.linkedin.com/in/peter-malope-a578242bb", label: "LinkedIn" },
   // { icon: Twitter, href: "https://twitter.com", label: "Twitter" },
-  { icon: Mail, href: "mailto:mpmalope03@email.com", label: "Email" },
+  { icon: Mail, href: "mailto:mpmalope03@gmail.com", label: "Email" },
 ];
 
 const Footer = () => {
@@ -36,11 +36,11 @@ const Footer = () => {
             {/* Contact Details */}
             <div className="space-y-3">
               <a
-                href="mailto:mpmalope03@email.com"
+                href="mailto:mpmalope03@gmail.com"
                 className="flex items-center gap-3 text-midnight-foreground/70 hover:text-white transition-colors"
               >
                 <Mail size={18} />
-                <span>mpmalope03@email.com</span>
+                <span>mpmalope03@gmail.com</span>
               </a>
               <a
                 href="tel:+27682938418"
