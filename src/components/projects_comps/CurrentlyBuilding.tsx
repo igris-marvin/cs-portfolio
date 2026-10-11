@@ -1,5 +1,6 @@
 import { motion } from "framer-motion";
-import { Wrench, ExternalLink, Github } from "lucide-react";
+import { Wrench, ExternalLink } from "lucide-react";
+import { FiGithub } from "react-icons/fi";
 
 const currentProjects = [
   {
@@ -60,7 +61,7 @@ const CurrentlyBuilding = () => {
                     rel="noopener noreferrer"
                     className="text-muted-foreground hover:text-primary transition-colors"
                   >
-                    <Github size={18} />
+                    <FiGithub size={18} />
                   </a>
                 )}
                 {project.liveUrl && (

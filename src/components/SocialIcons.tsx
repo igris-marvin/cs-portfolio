@@ -1,5 +1,6 @@
 import { motion } from "framer-motion";
-import { Github, Linkedin, Mail } from "lucide-react";
+import { Linkedin, Mail } from "lucide-react";
+import { FiGithub } from "react-icons/fi";
 
 interface SocialIconsProps {
   variant?: "hero" | "default" | "filled";
@@ -7,7 +8,7 @@ interface SocialIconsProps {
 }
 
 const socialLinks = [
-  { icon: Github, href: "https://github.com/igris-marvin", label: "GitHub" },
+  { icon: FiGithub, href: "https://github.com/igris-marvin", label: "GitHub" },
   { icon: Linkedin, href: "https://www.linkedin.com/in/peter-malope-a578242bb", label: "LinkedIn" },
   // { icon: Twitter, href: "https://twitter.com", label: "Twitter" },
   { icon: Mail, href: "mailto:mpmalope03@gmail.com", label: "Email" },
@@ -27,7 +28,7 @@ const SocialIcons = ({ variant = "default", size = "md" }: SocialIconsProps) => 
   };
 
   const variantClasses = {
-    hero: "bg-white/10 backdrop-blur-md border border-white/20 text-white hover:bg-white/20 hover:border-white/40",
+    hero: "bg-pink-500/10 backdrop-blur-md border border-pink/20 text-pink-500 hover:bg-pink/20 hover:border-pink-500/40",
     default: "light-card hover:border-primary/30 text-muted-foreground hover:text-primary",
     filled: "bg-primary/20 border border-primary/30 text-primary hover:bg-primary/30",
   };
@@ -45,7 +46,7 @@ const SocialIcons = ({ variant = "default", size = "md" }: SocialIconsProps) => 
           transition={{ delay: index * 0.1 }}
           whileHover={{ scale: 1.1, y: -3 }}
           whileTap={{ scale: 0.95 }}
-          className={`${sizeClasses[size]} rounded-md flex items-center justify-center transition-all ${variantClasses[variant]}`}
+          className={`${sizeClasses[size]} rounded-md flex items-center justify-center transition-all ${variantClasses[variant]} border text-pink-500 border-pink-400 bg-pink-50`}
           aria-label={social.label}
         >
           <social.icon size={iconSizes[size]} />

@@ -28,9 +28,9 @@ const ServicesSection = () => {
               viewport={{ once: true }}
               transition={{ delay: index * 0.1 }}
               whileHover={{ y: -5 }}
-              className="light-card p-6 rounded-md group hover:border-primary/30 transition-all"
+              className="light-card p-6 rounded-md group hover:border-primary/30 transition-all border border-gray-200"
             >
-              <div className="w-12 h-12 rounded-md bg-gradient-to-br from-primary/20 to-accent/20 flex items-center justify-center mb-4 group-hover:from-primary/30 group-hover:to-accent/30 transition-colors">
+              <div className="w-12 h-12 rounded-md bg-linear-to-br from-primary/20 to-accent/20 flex items-center justify-center mb-4 group-hover:from-primary/30 group-hover:to-accent/30 transition-colors text-pink-500 bg-pink-50">
                 <service.icon size={24} className="text-primary" />
               </div>
               <h3 className="font-display font-semibold text-lg mb-2">{service.title}</h3>

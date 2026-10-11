@@ -1,9 +1,10 @@
-import { Github, Linkedin, Mail, MapPin, Phone } from "lucide-react";
+import { Linkedin, Mail, MapPin, Phone } from "lucide-react";
+import { FiGithub } from "react-icons/fi";
 import { Link } from "react-router-dom";
 import { motion } from "framer-motion";
 
 const socialLinks = [
-  { icon: Github, href: "https://github.com/igris-marvin", label: "GitHub" },
+  { icon: FiGithub, href: "https://github.com/igris-marvin", label: "GitHub" },
   { icon: Linkedin, href: "https://www.linkedin.com/in/peter-malope-a578242bb", label: "LinkedIn" },
   // { icon: Twitter, href: "https://twitter.com", label: "Twitter" },
   { icon: Mail, href: "mailto:mpmalope03@gmail.com", label: "Email" },
@@ -13,14 +14,14 @@ const Footer = () => {
   const currentYear = new Date().getFullYear();
 
   return (
-    <footer className="relative mt-20 border-t border-white/10 bg-midnight text-white bg-gray-900">
+    <footer className="relative border-t border-white/10 bg-midnight text-white bg-gray-900">
       <div className="relative mx-auto max-w-7xl px-6 py-16">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
           {/* Left Column - Info & Socials */}
           <div className="space-y-8">
             {/* Logo */}
             <Link to="/" className="flex items-center gap-2">
-              <div className="w-12 h-12 rounded-md bg-gradient-to-br from-primary to-accent flex items-center justify-center">
+              <div className="w-12 h-12 rounded-md bg-linear-to-br from-primary to-accent flex items-center justify-center border border-pink-500">
                 <span className="font-display font-bold text-xl text-pink-500">MP</span>
               </div>
               <span className="font-display font-semibold text-xl text-pink-500">
@@ -28,32 +29,46 @@ const Footer = () => {
               </span>
             </Link>
 {/*  */}
-            <p className="text- max-w-md">
-              Crafting digital experiences through code. Passionate about building 
+            <p className="max-w-md text-base text-midnight-foreground/70">
+              Crafting digital experiences through code. Passionate about building
               innovative solutions that make a difference.
             </p>
 
             {/* Contact Details */}
-            <div className="space-y-3">
-              <a
+            <motion.div
+              className="space-y-3"
+              initial={{ opacity: 0, y: 12 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.4, ease: "easeOut" }}
+            >
+              <motion.a
                 href="mailto:mpmalope03@gmail.com"
                 className="flex items-center gap-3 text-midnight-foreground/70 hover:text-white transition-colors"
+                whileHover={{ x: 4 }}
+                whileTap={{ scale: 0.98 }}
               >
                 <Mail size={18} />
                 <span>mpmalope03@gmail.com</span>
-              </a>
-              <a
+              </motion.a>
+              <motion.a
                 href="tel:+27682938418"
                 className="flex items-center gap-3 text-midnight-foreground/70 hover:text-white transition-colors"
+                whileHover={{ x: 4 }}
+                whileTap={{ scale: 0.98 }}
               >
                 <Phone size={18} />
                 <span>+27 68 293 8418</span>
-              </a>
-              <div className="flex items-center gap-3 text-midnight-foreground/70">
+              </motion.a>
+              <motion.div
+                className="flex items-center gap-3 text-midnight-foreground/70"
+                initial={{ opacity: 0, y: 12 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.4, ease: "easeOut", delay: 0.05 }}
+              >
                 <MapPin size={18} />
                 <span>Pretoria, Gauteng, South Africa</span>
-              </div>
-            </div>
+              </motion.div>
+            </motion.div>
 
             {/* Social Icons */}
             <div className="flex gap-4 text-pink-500">
@@ -75,35 +90,48 @@ const Footer = () => {
           </div>
 
           {/* Right Column - Quick Links */}
-          <div className="space-y-6">
+          <motion.div
+            className="space-y-6"
+            initial={{ opacity: 0, x: 18 }}
+            animate={{ opacity: 1, x: 0 }}
+            transition={{ duration: 0.4, ease: "easeOut" }}
+          >
             <h3 className="font-display text-xl font-semibold text-pink-500">Quick Links</h3>
             <div className="grid grid-cols-2 gap-4">
-              <Link 
-                to="/" 
-                className="text-midnight-foreground/70 hover:text-white transition-colors"
-              >
-                Home
-              </Link>
-              <Link 
-                to="/projects" 
-                className="text-midnight-foreground/70 hover:text-white transition-colors"
-              >
-                Projects
-              </Link>
-              <Link 
-                to="/about" 
-                className="text-midnight-foreground/70 hover:text-white transition-colors"
-              >
-                About
-              </Link>
-              <Link 
-                to="/contact" 
-                className="text-midnight-foreground/70 hover:text-white transition-colors"
-              >
-                Contact
-              </Link>
+              <motion.div whileHover={{ x: 4 }} whileTap={{ scale: 0.98 }}>
+                <Link
+                  to="/"
+                  className="text-midnight-foreground/70 hover:text-white transition-colors"
+                >
+                  Home
+                </Link>
+              </motion.div>
+              <motion.div whileHover={{ x: 4 }} whileTap={{ scale: 0.98 }}>
+                <Link
+                  to="/projects"
+                  className="text-midnight-foreground/70 hover:text-white transition-colors"
+                >
+                  Projects
+                </Link>
+              </motion.div>
+              <motion.div whileHover={{ x: 4 }} whileTap={{ scale: 0.98 }}>
+                <Link
+                  to="/about"
+                  className="text-midnight-foreground/70 hover:text-white transition-colors"
+                >
+                  About
+                </Link>
+              </motion.div>
+              <motion.div whileHover={{ x: 4 }} whileTap={{ scale: 0.98 }}>
+                <Link
+                  to="/contact"
+                  className="text-midnight-foreground/70 hover:text-white transition-colors"
+                >
+                  Contact
+                </Link>
+              </motion.div>
             </div>
-          </div>
+          </motion.div>
         </div>
 
         {/* Bottom Bar */}

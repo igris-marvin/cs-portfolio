@@ -126,7 +126,7 @@ export const ProjectsPage = () => {
                                     viewport={{ once: true }}
                                     transition={{ delay: index * 0.05 }}
                                     whileHover={{ scale: 1.05, y: -2 }}
-                                    className="px-5 py-2.5 rounded-md light-card text-sm font-medium hover:border-primary/30 hover:bg-primary/5 transition-all cursor-default"
+                                    className="px-5 py-2.5 rounded-md light-card text-sm font-medium hover:border-primary/30 hover:bg-primary/5 transition-all cursor-default border border-gray-200 bg-gray-50"
                                 >
                                     {tech}
                                 </motion.span>
@@ -203,7 +203,7 @@ export const ProjectsPage = () => {
                         <div className="max-w-4xl mx-auto">
                             <div className="relative">
                                 {/* Timeline line */}
-                                <div className="absolute left-8 top-0 bottom-0 w-0.5 bg-gradient-to-b from-primary/50 via-accent/50 to-primary/50 hidden md:block" />
+                                <div className="timeline-rail" aria-hidden="true" />
 
                                 <div className="space-y-8">
                                     {timelineData.map((phase, index) => (
@@ -216,12 +216,12 @@ export const ProjectsPage = () => {
                                             className="relative"
                                         >
                                             {/* Timeline dot */}
-                                            <div className="absolute left-6 top-6 w-4 h-4 rounded-sm bg-primary hidden md:block" />
+                                            <div className="timeline-marker" aria-hidden="true" />
 
-                                            <div className="md:ml-20 light-card p-6 rounded-md hover:border-primary/30 transition-all">
+                                            <div className="md:ml-20 light-card p-6 rounded-md hover:border-primary/30 transition-all border border-gray-200 bg-gray-50">
                                                 <div className="flex flex-wrap items-start justify-between gap-4 mb-4">
                                                     <div className="flex items-center gap-3">
-                                                        <div className="w-10 h-10 rounded-md bg-gradient-to-br from-primary/20 to-accent/20 flex items-center justify-center">
+                                                        <div className="w-10 h-10 rounded-md bg-linear-to-br from-primary/20 to-accent/20 flex items-center justify-center text-pink-500 bg-pink-50">
                                                             <phase.icon size={20} className="text-primary" />
                                                         </div>
                                                         <div>
@@ -240,7 +240,7 @@ export const ProjectsPage = () => {
                                                     {phase.items.map((item) => (
                                                         <span
                                                             key={item}
-                                                            className="px-3 py-1.5 text-sm rounded-sm bg-muted/50 border border-border"
+                                                            className="px-3 py-1.5 text-sm rounded-sm bg-muted/50 text-pink-500 border border-pink-400 bg-pink-50 font-bold"
                                                         >
                                                             {item}
                                                         </span>

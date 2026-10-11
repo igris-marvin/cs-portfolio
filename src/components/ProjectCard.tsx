@@ -1,5 +1,6 @@
 import { motion } from "framer-motion";
-import { ExternalLink, GitBranchIcon, Clock, Calendar } from "lucide-react";
+import { ExternalLink, Clock, Calendar } from "lucide-react";
+import { FiGithub } from "react-icons/fi";
 
 export interface ProjectDetailsProps {
   id: string;
@@ -29,7 +30,7 @@ const ProjectCard = ({ project, index = 0, detailed = false }: ProjectCardProps)
       viewport={{ once: true }}
       transition={{ delay: index * 0.1 }}
       whileHover={{ y: -5 }}
-      className="group light-card rounded-lg overflow-hidden"
+      className="group light-card rounded-lg overflow-hidden border border-gray-200"
     >
       {/* Image */}
       <div className="relative h-48 overflow-hidden">
@@ -38,7 +39,7 @@ const ProjectCard = ({ project, index = 0, detailed = false }: ProjectCardProps)
           alt={project.title}
           className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
         />
-        <div className="absolute inset-0 bg-gradient-to-t from-card via-transparent to-transparent" />
+        <div className="absolute inset-0 bg-linear-to-t from-card via-transparent to-transparent" />
         
         {/* Links Overlay */}
         <div className="absolute top-4 right-4 flex gap-2 opacity-0 group-hover:opacity-100 transition-opacity">
@@ -59,8 +60,7 @@ const ProjectCard = ({ project, index = 0, detailed = false }: ProjectCardProps)
               rel="noopener noreferrer"
               className="w-9 h-9 rounded-md bg-background/80 backdrop-blur flex items-center justify-center hover:bg-primary hover:text-amber transition-colors"
             >
-              {/* sadad */}
-              <GitBranchIcon size={16} />
+              <FiGithub size={16} />
             </a>
           )}
         </div>
@@ -104,7 +104,7 @@ const ProjectCard = ({ project, index = 0, detailed = false }: ProjectCardProps)
           {project.tags.slice(0, 4).map((tag) => (
             <span
               key={tag}
-              className="px-3 py-1 text-xs rounded-sm bg-primary/10 text-primary border border-primary/20"
+              className="px-3 py-1 text-xs rounded-sm bg-primary/10 text-primary border border-primary/20 text-pink-500 font-bold bg-pink-50"
             >
               {tag}
             </span>

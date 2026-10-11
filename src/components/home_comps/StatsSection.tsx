@@ -15,7 +15,7 @@ const StatsSection = () => {
               transition={{ delay: index * 0.1 }}
               className="text-center"
             >
-              <div className="font-display text-4xl md:text-5xl font-bold text-gradient-cosmic mb-2">
+              <div className="font-display text-4xl md:text-5xl font-bold text-gradient-cosmic mb-2 text-pink-500">
                 <AnimatedCounter value={stat.value} suffix={stat.suffix} />
               </div>
               <p className="text-muted-foreground text-sm md:text-base">{stat.label}</p>

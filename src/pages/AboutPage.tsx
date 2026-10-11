@@ -20,7 +20,7 @@ export const AboutPage = () => {
                             transition={{ duration: 0.6 }}
                             className="lg:col-span-3 relative lg:h-full"
                         >
-                            <div className="relative h-full min-h-[500px] lg:min-h-0 rounded-lg overflow-hidden">
+                            <div className="relative h-full min-h-[125] lg:min-h-0 rounded-lg overflow-hidden">
                                 <img
                                     src={dev_profile}
                                     alt="Dev Profile Image"
@@ -34,19 +34,20 @@ export const AboutPage = () => {
                                     fetchPriority="low"
                                     crossOrigin="anonymous"
                                 />
-                                <div className="absolute inset-0 bg-gradient-to-t from-background via-transparent to-transparent" />
-                                <div className="absolute inset-0 bg-gradient-to-r from-background/30 to-transparent" />
+                                
+                        {/* GRADIENT */}
+                        <div className="absolute inset-0 bg-linear-to-b from-transparent via-transparent via-70% to-white" />
 
                                 {/* Floating decorative elements */}
                                 <motion.div
                                     animate={{ y: [0, -10, 0] }}
                                     transition={{ repeat: Infinity, duration: 3 }}
-                                    className="absolute top-10 right-10 w-20 h-20 rounded-md bg-gradient-to-br from-primary/30 to-accent/30 blur-xl"
+                                    className="absolute top-10 right-10 w-20 h-20 rounded-md bg-linear-to-br from-primary/30 to-accent/30 blur-xl"
                                 />
                                 <motion.div
                                     animate={{ y: [0, 10, 0] }}
                                     transition={{ repeat: Infinity, duration: 4 }}
-                                    className="absolute bottom-32 left-10 w-32 h-32 rounded-md bg-gradient-to-br from-secondary/20 to-primary/20 blur-2xl"
+                                    className="absolute bottom-32 left-10 w-32 h-32 rounded-md bg-linear-to-br from-secondary/20 to-primary/20 blur-2xl"
                                 />
                             </div>
 
@@ -84,7 +85,7 @@ export const AboutPage = () => {
                                     initial={{ opacity: 0, y: 20 }}
                                     animate={{ opacity: 1, y: 0 }}
                                     transition={{ delay: 0.4 }}
-                                    className="text-xl text-primary font-medium"
+                                    className="text-xl text-primary font-medium text-pink-500"
                                 >
                                     Software Developer
                                 </motion.p>
@@ -141,7 +142,7 @@ export const AboutPage = () => {
                                             initial={{ opacity: 0, scale: 0.8 }}
                                             animate={{ opacity: 1, scale: 1 }}
                                             transition={{ delay: 0.7 + index * 0.1 }}
-                                            className="px-4 py-2 rounded-md light-card text-sm"
+                                            className="px-4 py-2 rounded-md light-card text-sm border border-gray-200 bg-gray-50"
                                         >
                                             {hobby}
                                         </motion.span>
@@ -157,29 +158,29 @@ export const AboutPage = () => {
                                 className="grid grid-cols-1 sm:grid-cols-2 gap-4"
                             >
                                 {/* Work Card */}
-                                <div className="light-card p-5 rounded-md hover:border-primary/30 transition-all">
+                                <div className="light-card p-5 rounded-md hover:border-primary/30 transition-all border border-gray-200 bg-gray-50">
                                     <div className="flex items-center gap-3 mb-3">
-                                        <div className="w-10 h-10 rounded-md bg-gradient-to-br from-primary/20 to-accent/20 flex items-center justify-center">
+                                        <div className="w-10 h-10 rounded-md bg-linear-to-br from-primary/20 to-accent/20 flex items-center justify-center text-pink-500 bg-pink-50">
                                             <Briefcase size={18} className="text-primary" />
                                         </div>
                                         <h3 className="font-display font-semibold">Work</h3>
                                     </div>
                                     <p className="text-sm text-muted-foreground mb-1">-</p>
-                                    <p className="text-xs text-muted-foreground/70">-</p>
-                                    <p className="text-xs text-muted-foreground/70">2025 - Present</p>
+                                    <p className="text-xs text-muted-foreground/70 text-gray-500">-</p>
+                                    <p className="text-xs text-muted-foreground/70 text-gray-500">2025 - Present</p>
                                 </div>
 
                                 {/* Education Card */}
-                                <div className="light-card p-5 rounded-md hover:border-primary/30 transition-all">
+                                <div className="light-card p-5 rounded-md hover:border-primary/30 transition-all border border-gray-200 bg-gray-50">
                                     <div className="flex items-center gap-3 mb-3">
-                                        <div className="w-10 h-10 rounded-md bg-gradient-to-br from-primary/20 to-accent/20 flex items-center justify-center">
+                                        <div className="w-10 h-10 rounded-md bg-linear-to-br from-primary/20 to-accent/20 flex items-center justify-center text-pink-500 bg-pink-50">
                                             <GraduationCap size={18} className="text-primary" />
                                         </div>
                                         <h3 className="font-display font-semibold">Education</h3>
                                     </div>
                                     <p className="text-sm text-muted-foreground mb-1">Diploma in Computer Science</p>
-                                    <p className="text-xs text-muted-foreground/70">Tshwane University of Technology</p>
-                                    <p className="text-xs text-muted-foreground/70">2020 - 2025</p>
+                                    <p className="text-xs text-muted-foreground/70 text-gray-500">Tshwane University of Technology</p>
+                                    <p className="text-xs text-muted-foreground/70 text-gray-500">2020 - 2025</p>
                                 </div>
                             </motion.div>
 

@@ -27,10 +27,10 @@ const SkillsSection = () => {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ delay: catIndex * 0.1 }}
-              className="light-card rounded-lg p-6 group hover:border-primary/30 transition-all"
+              className="light-card rounded-lg p-6 group hover:border-primary/30 transition-all border border-gray-200"
             >
               <div className="flex items-center gap-3 mb-6">
-                <div className="w-10 h-10 rounded-md bg-gradient-to-br from-primary/20 to-accent/20 flex items-center justify-center">
+                <div className="w-10 h-10 rounded-md bg-gradient-to-br from-primary/20 to-accent/20 flex items-center justify-center text-pink-500 bg-pink-50">
                   <category.icon size={20} className="text-primary" />
                 </div>
                 <h3 className="font-display font-semibold text-lg">{category.title}</h3>
@@ -45,7 +45,7 @@ const SkillsSection = () => {
                     viewport={{ once: true }}
                     transition={{ delay: catIndex * 0.1 + skillIndex * 0.05 }}
                     whileHover={{ scale: 1.05, y: -2 }}
-                    className="px-3 py-1.5 text-sm rounded-sm bg-muted/50 border border-border hover:border-primary/30 hover:bg-primary/5 transition-all cursor-default"
+                    className="px-3 py-1.5 text-sm rounded-sm bg-muted/50 border border-gray-200 hover:border-primary/30 hover:bg-primary/5 transition-all cursor-default bg-gray-50 font-bold"
                   >
                     {skill}
                   </motion.span>

@@ -63,7 +63,7 @@ const ContactForm = ({ compact = false }: ContactFormProps) => {
     setTimeout(() => setIsSubmitted(false), 3000);
   };
 
-  const inputClasses = `w-full px-4 py-3 rounded-xl bg-muted/50 border border-border focus:border-accent focus:outline-none focus:ring-2 focus:ring-accent/20 transition-all placeholder:text-muted-foreground/50 ${compact ? 'py-2.5 text-sm' : ''}`;
+  const inputClasses = `w-full px-4 py-3 rounded-md bg-muted/50 border border-gray-200 bg-gray-100 focus:border-accent focus:outline-none focus:ring-2 focus:ring-accent/20 transition-all placeholder:text-muted-foreground/50 ${compact ? 'py-2.5 text-sm' : ''}`;
   const labelClasses = `block text-sm font-medium mb-1.5 ${compact ? 'text-xs' : ''}`;
 
   return (
@@ -78,7 +78,7 @@ const ContactForm = ({ compact = false }: ContactFormProps) => {
             value={formData.firstName}
             onChange={handleChange}
             className={inputClasses}
-            placeholder="John"
+            placeholder="Sipho"
           />
           {errors.firstName && <p className="text-destructive text-xs mt-1">{errors.firstName}</p>}
         </div>
@@ -91,7 +91,7 @@ const ContactForm = ({ compact = false }: ContactFormProps) => {
             value={formData.lastName}
             onChange={handleChange}
             className={inputClasses}
-            placeholder="Doe"
+            placeholder="Sithole"
           />
           {errors.lastName && <p className="text-destructive text-xs mt-1">{errors.lastName}</p>}
         </div>
@@ -106,7 +106,7 @@ const ContactForm = ({ compact = false }: ContactFormProps) => {
           value={formData.email}
           onChange={handleChange}
           className={inputClasses}
-          placeholder="john@example.com"
+          placeholder="sithole@example.com"
         />
         {errors.email && <p className="text-destructive text-xs mt-1">{errors.email}</p>}
       </div>
@@ -127,14 +127,14 @@ const ContactForm = ({ compact = false }: ContactFormProps) => {
 
       <motion.button
         type="submit"
-        // disabled={isSubmitting || isSubmitted}
-        disabled={true}
+        disabled={isSubmitting || isSubmitted}
+        // disabled={true}
         whileHover={{ scale: 1.02 }}
         whileTap={{ scale: 0.98 }}
-        className={`w-full py-3 px-6 rounded-xl font-semibold flex items-center justify-center gap-2 transition-all disabled:opacity-70 ${
+        className={`w-full py-3 px-6 rounded-md font-semibold flex items-center justify-center gap-2 transition-all disabled:opacity-70 bg-pink-500 text-white ${
           isSubmitted
             ? 'bg-green-500/20 text-green-400 border border-green-500/30'
-            : 'bg-gradient-to-r from-primary to-accent text-primary-foreground hover:shadow-lg hover:shadow-primary/25'
+            : 'bg-linear-to-r from-primary to-accent text-primary-foreground hover:shadow-lg hover:shadow-primary/25'
         } ${compact ? 'py-2.5 text-sm' : ''}`}
       >
         {isSubmitted ? (

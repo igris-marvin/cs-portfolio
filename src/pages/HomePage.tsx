@@ -13,7 +13,7 @@ import StatsSection from "../components/home_comps/StatsSection"
 import CTASection from "../components/home_comps/CTASection"
 // import CompanySlider from "../components/home_comps/CompanySlider"
 // import ScrollToTop from "../components/home_comps/ScrollToTop"
-import { DisclaimerAlert } from "../components/temp_comps/DisclaimerAlert"
+// import { DisclaimerAlert } from "../components/temp_comps/DisclaimerAlert"
 
 export const HomePage = () => {
 
@@ -24,7 +24,7 @@ export const HomePage = () => {
                 {/* TODO remove ALERT */}
 
                 {/* DISCLAIMER ALERT BUTTON */}
-                <DisclaimerAlert />
+                {/* <DisclaimerAlert /> */}
 
                 {/* HERO [ SECTION ] */}
                 <section className="relative min-h-screen flex items-center justify-center overflow-hidden">
@@ -47,7 +47,7 @@ export const HomePage = () => {
                         />
 
                         {/* GRADIENT */}
-                        <div className="absolute inset-0 bg-linear-to-b from-transparent via-transparent via-30% to-background" />
+                        <div className="absolute inset-0 bg-linear-to-b from-transparent via-transparent via-85% to-white" />
 
                     </div>
 

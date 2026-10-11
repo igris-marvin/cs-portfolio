@@ -10,10 +10,10 @@ const CTASection = () => {
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
-          className="relative overflow-hidden rounded-lg bg-midnight p-10 md:p-16 text-center"
+          className="relative overflow-hidden rounded-lg bg-midnight p-10 md:p-16 text-center border border-gray-200 bg-gray-900"
         >
           {/* Background gradient */}
-          <div className="absolute inset-0 bg-gradient-to-br from-primary/20 via-transparent to-accent/20" />
+          <div className="absolute inset-0 bg-linear-to-br from-primary/20 via-transparent to-accent/20" />
           
           <div className="relative z-10">
             <motion.h2
@@ -31,7 +31,7 @@ const CTASection = () => {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ delay: 0.2 }}
-              className="text-midnight-foreground/80 max-w-2xl mx-auto mb-8 text-lg"
+              className="text-midnight-foreground/80 max-w-2xl mx-auto mb-8 text-lg text-indigo-100"
             >
               Let's collaborate on your next project. Whether you have a clear vision or 
               need help defining it, I'm here to bring your ideas to life.
@@ -46,7 +46,7 @@ const CTASection = () => {
             >
               <Link
                 to="/contact"
-                className="group flex items-center gap-2 px-6 py-3 rounded-md bg-primary text-primary-foreground font-medium hover:bg-primary/90 transition-colors"
+                className="group flex items-center gap-2 px-6 py-3 rounded-md bg-primary text-primary-foreground font-medium hover:bg-primary/90 transition-colors bg-pink-500 text-white"
               >
                 <Mail size={18} />
                 <span>Get in Touch</span>
