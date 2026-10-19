@@ -1,5 +1,13 @@
 # React + TypeScript + Vite
 
+## API configuration
+
+The frontend uses Axios to call the `/about`, `/contact`, `/contact-detail`,
+`/journey`, `/project`, `/social-data`, and `/technical-skill` endpoints. Set
+`VITE_API_BASE_URL` in a local `.env` file to the API server's base URL (for
+example, `http://localhost:3000`). If it is unset, requests use the current
+origin.
+
 This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
 
 Currently, two official plugins are available:

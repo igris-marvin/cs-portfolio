@@ -2,9 +2,25 @@ import { motion } from "framer-motion";
 import { MapPin, Briefcase, GraduationCap, Heart } from "lucide-react";
 import SocialIcons from "../components/SocialIcons";
 import dev_profile from "../assets/images/dev/mpmalope.webp"
+import { useData } from "../context/data-context";
 
 export const AboutPage = () => {
+    const { about, errors } = useData();
 
+    if (about === null) {
+        return (
+            <main className="flex min-h-screen items-center justify-center pt-24 pb-20">
+                <p role={errors.about ? "alert" : undefined} className="text-lg text-muted-foreground">
+                    {errors.about
+                        ? `Unable to load About data: ${errors.about}`
+                        : "No About data found."}
+                </p>
+            </main>
+        );
+    }
+
+    console.log("Image: ", about.image);
+    
     return (
         <>
 
@@ -22,7 +38,7 @@ export const AboutPage = () => {
                         >
                             <div className="relative h-full min-h-[125] lg:min-h-0 rounded-lg overflow-hidden">
                                 <img
-                                    src={dev_profile}
+                                    src={about && about.image ? about.image : dev_profile}
                                     alt="Dev Profile Image"
                                     className="w-full h-full object-cover"
 
@@ -87,7 +103,7 @@ export const AboutPage = () => {
                                     transition={{ delay: 0.4 }}
                                     className="text-xl text-primary font-medium text-pink-500"
                                 >
-                                    Software Developer
+                                    {about.occupation}
                                 </motion.p>
                             </div>
 
