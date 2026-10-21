@@ -6,26 +6,19 @@ import { useData } from "../context/data-context";
 
 export const AboutPage = () => {
     const { about, errors } = useData();
-
-    if (about === null) {
-        return (
-            <main className="flex min-h-screen items-center justify-center pt-24 pb-20">
-                <p role={errors.about ? "alert" : undefined} className="text-lg text-muted-foreground">
-                    {errors.about
-                        ? `Unable to load About data: ${errors.about}`
-                        : "No About data found."}
-                </p>
-            </main>
-        );
-    }
-
-    console.log("Image: ", about.image);
+    const profileImage = about?.image?.trim() || dev_profile;
+    const occupation = about?.occupation?.trim() || "Software Developer";
     
     return (
         <>
 
             <main className="min-h-screen pt-24 pb-20">
                 <div className="mx-auto max-w-7xl px-6">
+                    {errors.about && (
+                        <p role="alert" className="mb-6 text-sm text-destructive">
+                            Unable to load About data. Showing placeholder details instead.
+                        </p>
+                    )}
                     <div className="grid lg:grid-cols-5 gap-12 lg:min-h-[calc(100vh-12rem)]">
 
                         {/* Left - Image (60-65% on desktop) - Full height */}
@@ -38,7 +31,7 @@ export const AboutPage = () => {
                         >
                             <div className="relative h-full min-h-[125] lg:min-h-0 rounded-lg overflow-hidden">
                                 <img
-                                    src={about && about.image ? about.image : dev_profile}
+                                    src={profileImage}
                                     alt="Dev Profile Image"
                                     className="w-full h-full object-cover"
 
@@ -103,7 +96,7 @@ export const AboutPage = () => {
                                     transition={{ delay: 0.4 }}
                                     className="text-xl text-primary font-medium text-pink-500"
                                 >
-                                    {about.occupation}
+                                    {occupation}
                                 </motion.p>
                             </div>
 

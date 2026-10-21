@@ -1,19 +1,22 @@
-import { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
-import { ChevronDown, ChevronUp, Sparkles, Rocket, Calendar, GraduationCap, Code2, Layers } from "lucide-react";
-import ProjectCard, { type ProjectDetailsProps } from "../components/ProjectCard";
+import { ChevronDown, ChevronUp, Sparkles, Rocket, Calendar } from "lucide-react";
+import ProjectCard from "../components/ProjectCard";
 import TechSlider from "../components/projects_comps/TechSlider";
 // import CurrentlyBuilding from "../components/projects_comps/CurrentlyBuilding";
 import ScrollToTop from "../components/home_comps/ScrollToTop";
-import ezby_profile_image from "../assets/images/projects/ezby_profile_image.svg"
-import pulse_app_profile_image from "../assets/images/projects/pulse_app_profile_image.webp"
-import sani_profile_image from "../assets/images/projects/sani_enterprise_profile_image.webp"
+import { useProjectsPageData } from "../hooks/useProjectsPageData";
 
 
 export const ProjectsPage = () => {
 
-    const [showAll, setShowAll] = useState(false);
-    const displayedProjects = showAll ? allProjects : allProjects.slice(0, 4);
+    const {
+        projects,
+        hasMoreProjects,
+        showAll,
+        toggleShowAll,
+        techStack,
+        timeline,
+    } = useProjectsPageData();
 
     return (
         <>
@@ -68,7 +71,7 @@ export const ProjectsPage = () => {
 
                         <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                             <AnimatePresence>
-                                {displayedProjects.map((project, index) => (
+                                {projects.map((project, index) => (
                                     <ProjectCard
                                         key={project.id}
                                         project={project}
@@ -79,14 +82,14 @@ export const ProjectsPage = () => {
                             </AnimatePresence>
                         </div>
 
-                        {allProjects.length > 4 && (
+                        {hasMoreProjects && (
                             <motion.div
                                 initial={{ opacity: 0 }}
                                 animate={{ opacity: 1 }}
                                 className="flex justify-center mt-10"
                             >
                                 <button
-                                    onClick={() => setShowAll(!showAll)}
+                                    onClick={toggleShowAll}
                                     className="flex items-center gap-2 px-6 py-3 rounded-md light-card hover:border-primary/30 transition-all group"
                                 >
                                     <span>{showAll ? "Show Less" : "Show All Projects"}</span>
@@ -206,7 +209,7 @@ export const ProjectsPage = () => {
                                 <div className="timeline-rail" aria-hidden="true" />
 
                                 <div className="space-y-8">
-                                    {timelineData.map((phase, index) => (
+                                    {timeline.map((phase, index) => (
                                         <motion.div
                                             key={phase.period}
                                             initial={{ opacity: 0, x: -30 }}
@@ -259,108 +262,5 @@ export const ProjectsPage = () => {
                 <ScrollToTop />
             </main>
         </>
-    )
-}
-
-
-const allProjects: ProjectDetailsProps[] = [
-    {
-        id: "1",
-        title: "Sani Enterprise (Voluntary Project)",
-        description: "A Full-stack e-commerce CMS project for selling furniture on the internet.",
-        image: sani_profile_image,
-        tags: ["React JS", "TypeScript", "SpringBoot", "MySQL"],
-        duration: "3 months",
-        year: "2024",
-        date: "Feb 2024 - Apr 2024",
-        liveUrl: "#",
-        githubUrl: "https://github.com/igris-marvin/sani",
-        codeSnippet: `@RestController
-@RequestMapping("/api/products")
-public class ProductController {
-
-    @GetMapping
-    public Flux<List<Product>> getAllProducts() {
-        return productService
-                    .getAllProducts();
-    }
-        
-    @PostMapping("/create")
-    public Mono<Product> createProduct(@RequestBody Product product) {
-        return productService
-                    .createProduct(product);
-    }
-}`,
-    },
-    {
-        id: "2",
-        title: "Pulse App",
-        description: "An emotion regulator app with an admin dashboard, music player and Adruino that reads a client's pulse.",
-        image: pulse_app_profile_image,
-        tags: ["PHP", "HTML", "Arduino", "MySQL"],
-        duration: "4 months",
-        year: "2024",
-        date: "Feb 2024 - May 2024",
-        liveUrl: "#",
-        githubUrl: "#",
-        codeSnippet: ``,
-    },
-    {
-        id: "3",
-        title: "Eazy-Bookify",
-        description: "A Full-stack Web Application with booking services for properties, vehicles and flights.",
-        image: ezby_profile_image,
-        tags: ["React JS", "SpringBoot", "Socket", "Firebase"],
-        duration: "4 months",
-        year: "2024 - 2025",
-        date: "Aug 2024 - July 2025",
-        liveUrl: "#",
-        githubUrl: "#",
-        codeSnippet: ``,
-    }
-];
-
-const techStack = [
-    "Java", "JavaScript", "TypeScript", "PHP", 
-    "SpringBoot", "React JS", "Node JS", "Express JS",
-    "MySQL", "MariaDB", "PostgreSQL", "MongoDB", "Firebase",
-    "Virtual Studio Code", "IntelliJ IDEA", "GitHub", "Postman",
-];
-
-// const experimentalProjects = [
-//     { name: "WASM Compiler", tech: ["Rust", "WebAssembly"] },
-//     { name: "Reactive State Engine", tech: ["Signals", "Fine-grained Reactivity"] },
-//     { name: "AI Code Review Bot", tech: ["LLM", "AST Parsing"] },
-//     { name: "3D Portfolio v2", tech: ["Three.js", "React Fiber"] },
-// ];
-
-const timelineData = [
-    {
-        period: "University",
-        date: "2021 - 2024",
-        icon: GraduationCap,
-        items: ["Java", "OracleDB", "OOP fundamentals", "Data Structures", "Algorithms"],
-        description: "Built the foundation of computer science knowledge through rigorous coursework and hands-on projects.",
-    },
-    {
-        period: "Work Integrated Learning",
-        date: "2024 - 2025",
-        icon: Code2,
-        items: ["React JS", "Node.js", "TypeScript", "Firebase", "Asynchronous Programming", "Reactive Programming"],
-        description: "Learned modern web technologies to prepare for real-world development challenges.",
-    },
-    {
-        period: "Personal Projects",
-        date: "2024 - Present",
-        icon: Layers,
-        items: ["TypeScript", "UI/UX Design", "Responsive Design", "UI/UX Libraries"],
-        description: "Refined skills through building and shipping personal projects with production-level quality.",
-    },
-    // {
-    //     period: "Professional",
-    //     date: "2022 - Present",
-    //     icon: Briefcase,
-    //     items: ["Cloud Architecture", "DevOps", "System Design", "Leadership"],
-    //     description: "Expanded into architecture and team leadership while staying hands-on with modern tech stack.",
-    // },
-];
+    );
+};
