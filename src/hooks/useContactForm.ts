@@ -82,8 +82,10 @@ export const useContactForm = () => {
     setIsSubmitting(true);
     try {
       await contactService.create({
+        firstName: formData.firstName,
+        lastName: formData.lastName,
         email: formData.email.trim(),
-        message: `From: ${formData.firstName.trim()} ${formData.lastName.trim()}\n\n${formData.message.trim()}`,
+        message: `${formData.message.trim()}`,
       });
       setFormData(initialFormData);
       setSuccessMessage("Your message has been sent. Thank you for reaching out!");

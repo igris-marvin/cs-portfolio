@@ -8,6 +8,11 @@ The frontend uses Axios to call the `/about`, `/contact`, `/contact-detail`,
 example, `http://localhost:3000`). If it is unset, requests use the current
 origin.
 
+Project responses can include an optional `code_language` field to select the
+syntax highlighting language for code previews. Supported values include
+`bash`, `css`, `html`, `java`, `javascript`, `json`, `jsx`, `php`, `tsx`, and
+`typescript`; unrecognized values are displayed as plain text.
+
 This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
 
 Currently, two official plugins are available:

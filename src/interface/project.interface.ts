@@ -10,6 +10,7 @@ export interface ProjectInterface {
   end_date: Date | null;
   description: string;
   code_snippet: string | null;
+  code_language?: string | null;
   github_link: string | null;
   site: string | null;
   my_role: string | null;

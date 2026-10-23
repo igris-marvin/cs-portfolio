@@ -3,7 +3,10 @@ import { api } from "./api";
 
 export const technicalSkillService = {
   async getAll(): Promise<TechnicalSkillInterface[]> {
-    const response = await api.get<TechnicalSkillInterface[]>("/technical-skill");
+    const response = await api.get<unknown>("/technical-skill");
+    if (!Array.isArray(response.data)) {
+      throw new TypeError("Expected /technical-skill to return an array.");
+    }
     return response.data;
   },
 

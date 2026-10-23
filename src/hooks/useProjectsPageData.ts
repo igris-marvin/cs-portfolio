@@ -28,6 +28,7 @@ const fallbackProjects: ProjectDetailsProps[] = [
     date: "Feb 2024 - Apr 2024",
     liveUrl: "#",
     githubUrl: "https://github.com/igris-marvin/sani",
+    codeLanguage: "java",
     codeSnippet: `@RestController
 @RequestMapping("/api/products")
 public class ProductController {
@@ -117,6 +118,7 @@ const toProjectCard = (project: ProjectInterface, index: number): ProjectDetails
     liveUrl: project.site || undefined,
     githubUrl: project.github_link || undefined,
     codeSnippet: project.code_snippet || undefined,
+    codeLanguage: project.code_language || undefined,
   };
 };
 
