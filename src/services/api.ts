@@ -1,6 +1,9 @@
 import axios from "axios";
 
+const BASE_URL = "https://cs-portfolio-server-vkiq4znxv-wave-works.vercel.app"
+// const BASE_URL = "http://localhost:3000";
+
 export const api = axios.create({
-  baseURL: "http://localhost:3000",
-  timeout: 15000,
+  baseURL: BASE_URL,
+  timeout: 5000,
 });
